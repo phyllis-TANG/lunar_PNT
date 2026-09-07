@@ -157,7 +157,13 @@
       "prior_variance": 4.01,
       "posterior_variance": 0.617655571635,
       "variance_reduction": 3.392344428365,
-      "relative_variance_reduction": 0.845971179143
+      "relative_variance_reduction": 0.845971179143,
+      "prior_absolute_std_metres": 2.00249843945,
+      "posterior_absolute_std_metres": 0.785910663902,
+      "absolute_relative_variance_reduction": 0.845971179143,
+      "prior_relative_displacement_std_metres": 2.0,
+      "posterior_relative_displacement_std_metres": 0.791781226636,
+      "relative_displacement_variance_reduction": 0.843270622287
     },
     {
       "name": "range_difference_orthogonal_to_weak_x",
@@ -169,8 +175,14 @@
       "clock_model": "constant",
       "prior_variance": 4.01,
       "posterior_variance": 4.01,
-      "variance_reduction": 0.0,
-      "relative_variance_reduction": 0.0
+      "variance_reduction": -0.0,
+      "relative_variance_reduction": -0.0,
+      "prior_absolute_std_metres": 2.00249843945,
+      "posterior_absolute_std_metres": 2.00249843945,
+      "absolute_relative_variance_reduction": -0.0,
+      "prior_relative_displacement_std_metres": 2.0,
+      "posterior_relative_displacement_std_metres": 2.0,
+      "relative_displacement_variance_reduction": -0.0
     }
   ],
   "clock_sensitivity_assumptions": {
@@ -193,7 +205,13 @@
       "prior_variance": 4.01,
       "posterior_variance": 1.840344491476,
       "variance_reduction": 2.169655508524,
-      "relative_variance_reduction": 0.541061224071
+      "relative_variance_reduction": 0.541061224071,
+      "prior_absolute_std_metres": 2.00249843945,
+      "posterior_absolute_std_metres": 1.356592971925,
+      "absolute_relative_variance_reduction": 0.541061224071,
+      "prior_relative_displacement_std_metres": 2.0,
+      "posterior_relative_displacement_std_metres": 1.352902247568,
+      "relative_displacement_variance_reduction": 0.542413877131
     },
     {
       "name": "one_range_per_epoch_random_walk",
@@ -206,7 +224,13 @@
       "prior_variance": 4.01,
       "posterior_variance": 2.979387303196,
       "variance_reduction": 1.030612696804,
-      "relative_variance_reduction": 0.257010647582
+      "relative_variance_reduction": 0.257010647582,
+      "prior_absolute_std_metres": 2.00249843945,
+      "posterior_absolute_std_metres": 1.726090178176,
+      "absolute_relative_variance_reduction": 0.257010647582,
+      "prior_relative_displacement_std_metres": 2.0,
+      "posterior_relative_displacement_std_metres": 1.723204149049,
+      "relative_displacement_variance_reduction": 0.257641865175
     },
     {
       "name": "one_range_per_epoch_bias_drift",
@@ -219,7 +243,13 @@
       "prior_variance": 4.01,
       "posterior_variance": 3.772701328301,
       "variance_reduction": 0.237298671699,
-      "relative_variance_reduction": 0.05917672611
+      "relative_variance_reduction": 0.05917672611,
+      "prior_absolute_std_metres": 2.00249843945,
+      "posterior_absolute_std_metres": 1.942344286758,
+      "absolute_relative_variance_reduction": 0.05917672611,
+      "prior_relative_displacement_std_metres": 2.0,
+      "posterior_relative_displacement_std_metres": 1.939773426798,
+      "relative_displacement_variance_reduction": 0.059319763172
     },
     {
       "name": "one_range_per_epoch_independent",
@@ -231,8 +261,14 @@
       "clock_model": "independent",
       "prior_variance": 4.01,
       "posterior_variance": 4.01,
-      "variance_reduction": 0.0,
-      "relative_variance_reduction": 0.0
+      "variance_reduction": -0.0,
+      "relative_variance_reduction": -0.0,
+      "prior_absolute_std_metres": 2.00249843945,
+      "posterior_absolute_std_metres": 2.00249843945,
+      "absolute_relative_variance_reduction": -0.0,
+      "prior_relative_displacement_std_metres": 2.0,
+      "posterior_relative_displacement_std_metres": 2.0,
+      "relative_displacement_variance_reduction": -0.0
     }
   ]
 }

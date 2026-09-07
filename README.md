@@ -46,6 +46,8 @@
 
 量纲化先验扫描和非对称几何扫描可分别通过 `--prior-scan-output` 与 `--geometry-scan-output` 生成；仓库中的参数登记表会区分定义／方法来源与仅用于敏感性分析的数值。
 
+审计收尾还提供 `--drift-prior-output`、`--rank-audit-output`、`--clock-geometry-output` 和 `--figure-dir`，用于区分末端绝对位置与起终点相对位移、严格检查无先验零空间，并生成三张可文本审查的 SVG 对照曲线。
+
 ## 3. 仓库当前包含什么
 
 ```text

@@ -15,7 +15,11 @@ python tools/observability_audit.py \
   --output docs/observability_audit_controlled.json \
   --scan-output docs/observability_parameter_scan.csv \
   --prior-scan-output docs/observability_prior_scan.csv \
-  --geometry-scan-output docs/observability_geometry_scan.csv
+  --geometry-scan-output docs/observability_geometry_scan.csv \
+  --drift-prior-output docs/observability_drift_prior_scan.csv \
+  --rank-audit-output docs/observability_rank_audit.csv \
+  --clock-geometry-output docs/observability_clock_geometry.csv \
+  --figure-dir docs/figures
 ```
 
 机器可读结果保存在 [`observability_audit_controlled.json`](observability_audit_controlled.json)。
@@ -62,7 +66,7 @@ python tools/observability_audit.py \
 
 对于每历元两条对称视线的方向扫描，两条视线作差可以在同历元消去共同钟差。因此，本次 189 个组合中，三种钟模型给出了相同的弱方向收益曲线。这不是“钟模型通常不重要”，而是该对称几何对钟差不敏感，说明它适合隔离方向效应，却不适合单独评价钟模型。
 
-方向扫描覆盖视线差与弱方向夹角 0° 至 90°（每 15°）、强弱信息比 10/100/1000、测距信息权重 0.1/1/10，以及常值、随机游走和钟差—钟漂三种模型。在所有 27 组固定条件下，弱方向相对方差收益均随夹角单调不增，并在 90° 降至零。完整 189 行结果保存在 [`observability_parameter_scan.csv`](observability_parameter_scan.csv)。这里的“连续”仅指离散角度网格上没有反向跳变，尚不是解析单调性证明。
+方向扫描覆盖**两条视线之差的水平投影与弱方向的夹角** 0° 至 90°（每 15°）、强弱信息比 10/100/1000、测距信息权重 0.1/1/10，以及常值、随机游走和钟差—钟漂三种模型。该角度不是两颗卫星视线之间的夹角。CSV 字段和图轴统一使用 `horizontal_los_difference_to_weak_angle_degrees`。在所有 27 组固定条件下，弱方向相对方差收益均随该夹角单调不增，并在 90° 降至零。完整 189 行结果保存在 [`observability_parameter_scan.csv`](observability_parameter_scan.csv)。这里的“连续”仅指离散角度网格上没有反向跳变，尚不是解析单调性证明。
 
 为真正检查钟模型，又增加了每历元只有一条固定视线的受控场景。此时相对弱方向方差下降依次为：常值钟差 0.541061224071、钟差随机游走 0.257010647582、钟差—钟漂 0.05917672611、逐历元独立钟差 0。该排序只针对当前人为信息参数；它说明实现能够表现钟动态假设的影响，不说明哪种模型或数值符合月球接收机振荡器。
 
@@ -94,3 +98,34 @@ python tools/observability_audit.py \
 - 尚未比较候选指标与卫星数、GDOP 或里程计退化指标。
 
 下一步不再增加更多任意参数扫描，而应为钟过程噪声和伪距误差找到适用系统、时间尺度明确的数值依据，并将当前简化随机游走与 Allan 偏差对应的噪声类型逐项核对；随后接入 LuPNT 视线或真实里程计输出。目前仍不进入完整紧耦合系统。
+
+## 收尾：绝对位置与相对漂移
+
+审计现在并列计算末端绝对位置 `p_T` 和起终点相对位移 `p_T-p_0` 在弱方向上的标准差。相对位移使用完整线性函数 `[-v, 0, ..., +v]` 作用于联合协方差，因此自动包含 `Cov(p_0,p_T)` 交叉项；没有使用两个边缘方差直接相加。所有新 CSV 均报告辅助前后标准差（m）和相对方差下降。
+
+初始钟差扫描表明绝对位置和相对位移都依赖钟过程约束，但依赖程度不同。例如固定 1 m 位置先验时，随机游走模型把初始钟差标准差从 0.1 m 放松到近似无先验的 1,000,000 m，辅助后的绝对位置标准差由 2.96884 m 增至 3.10513 m，相对位移标准差由 2.84853 m 增至 2.93970 m。两者均受钟先验影响，但相对量不需要把初始位置本身估计为绝对已知。
+
+新增初始钟漂先验扫描，每次只改变 `sigma_d0`（0.01/0.1/1/10/1,000,000 m/s），固定位置先验 1 m、钟差先验 10 m、两类过程噪声密度、10 m 伪距标准差及 1 s 采样。钟漂先验放松时，绝对位置后验标准差由 3.08935 m 增至 3.16170 m，相对位移由 2.92957 m 增至 3.00000 m；最后一点的相对位移方差下降为数值意义上的零。结果见 [`observability_drift_prior_scan.csv`](observability_drift_prior_scan.csv) 和 [`initial_clock_drift_prior.svg`](figures/initial_clock_drift_prior.svg)。
+
+## 严格无先验与零空间
+
+[`observability_rank_audit.csv`](observability_rank_audit.csv) 使用真正的零信息移除先验，而不是用一个很大的有限标准差近似。钟过程单独无初始先验时：
+
+- 五历元钟差随机游走矩阵秩为 4、零空间维数为 1，对应共同钟差平移；
+- 五历元钟差—钟漂矩阵秩为 8、零空间维数为 2，对应初始相位/频率自由度。
+
+无位置先验的纯里程计系统保留三个全局平移自由度：末端绝对位置不可观，但 `p_T-p_0` 仍可估计。代码先检查目标线性函数是否与零空间正交；只有可估计时才使用伪逆计算有限方差，不可观量在 CSV 中以 `observable=False` 且标准差留空表示。当前代表几何下，移除全部位置和钟先验后，辅助系统仍有一个自由度；绝对位置仍不可观，而相对位移仍可估计，伪距几乎没有降低该相对量的标准差。
+
+## 少量代表几何下的四钟模型比较
+
+[`observability_clock_geometry.csv`](observability_clock_geometry.csv) 只比较三个几何：弱方向对齐的对称双视线、45° 水平投影夹角的仰角非对称双视线，以及从 45° 开始每历元变化 1° 的视线。每个几何比较自由逐历元钟差、无先验常值钟差、带 10 m 初始钟差先验的随机游走，以及额外带 1 m/s 初始钟漂先验的钟差—钟漂模型。
+
+对称对齐和时变对称配置中，四种模型结果相同，因为同历元视线差已消去共同钟误差；仰角非对称配置中存在很小差异。由于四个模型的状态和先验不同，且所有噪声值仍是敏感性设定，本表只验证实现和条件依赖，不构成钟模型优劣排序。
+
+## 本轮简短结论
+
+**已验证：** 相对位移指标正确包含跨时刻协方差；严格移除先验时零空间维数符合预期；不可观的绝对量不会被伪逆伪装成有限方差；初始钟差和钟漂先验会分别影响绝对位置与相对漂移收益；时变/非对称几何下方向趋势仍能解释。
+
+**依赖假设：** 所有改善数值依赖人工里程计信息、10 m 伪距噪声、简化钟过程和指定先验；代表几何比较中的模型先验并不相同。
+
+**仍未验证：** 未使用真实月球轨道、真实钟参数、真实里程计退化或真实误差；没有证明候选指标相对已有方法的新颖性或实际预测价值。
