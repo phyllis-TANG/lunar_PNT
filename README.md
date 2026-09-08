@@ -3,9 +3,9 @@
 
 面向月球表面机器人的定位、导航与授时（Lunar PNT）研究工作区。
 
-**当前状态：选题核查与可行性验证。尚未确定最终论文题目，尚无本项目的实验结果。**
+**当前状态：选题核查与可行性验证。已完成受控线性可观测性审计，但尚未确定最终论文题目，也尚无真实数据融合或实际定位性能结果。**
 
-背景整理日期：2026-09-07。计划在 2026 年 11 月中旬左右形成一篇完整、可投稿的会议论文；目标会议尚未确定。这是工作目标，不代表录用或发表承诺。
+背景整理日期：2026-09-08。计划在 2026 年 11 月中旬左右形成一篇完整、可投稿的会议论文；目标会议尚未确定。这是工作目标，不代表录用或发表承诺。
 
 ## 1. 项目目标
 
@@ -48,15 +48,24 @@
 
 审计收尾还提供 `--drift-prior-output`、`--rank-audit-output`、`--clock-geometry-output` 和 `--figure-dir`，用于区分末端绝对位置与起终点相对位移、严格检查无先验零空间，并生成三张可文本审查的 SVG 对照曲线。
 
+本轮建立了[针对性文献证据审计框架](docs/literature_evidence_matrix.md)、[物理参数证据表](docs/physical_parameter_evidence.csv)，并冻结[Unreal 第一版输出接口](docs/unreal_mvp_interface.md)。七项来源中只有 LuSNAR 官方仓库得到直接核查，其余六项仍待全文核实；接口只冻结文本合同，不表示文献审计已经完成或 Unreal 场景已经搭建。
+
 ## 3. 仓库当前包含什么
 
 ```text
 README.md                   项目入口、当前状态与起步流程
 docs/
   research_brief.md         完整研究背景、候选方案和验证边界
+  candidate_topic_assessment.md  候选课题收窄与验证门禁
+  observability_audit.md    已运行的受控可观测性审计及边界
+  literature_evidence_matrix.md  核心来源的证据状态与待核字段
+  physical_parameter_evidence.csv  参数数值、单位、来源和证据等级
+  unreal_mvp_interface.md   Unreal 与外部导航观测的最小接口
+tools/observability_audit.py  可复现审计与文本/SVG结果生成
+tests/test_observability_audit.py  审计回归测试
 ```
 
-当前仅提供研究说明。尚未建立可运行的定位系统、依赖清单、数据下载脚本或实验命令。请勿将旧项目报告中已经完成的工作，理解为本仓库已经包含并验证了对应代码。
+当前包含可运行的受控线性审计、测试和生成结果，但尚未建立真实数据定位系统、Unreal 工程、数据下载脚本或完整融合后端。请勿把受控协方差结果理解为真实月球定位性能，也不要将旧项目报告中记录的工作视为已经迁入并验证。
 
 ## 4. 如何开始
 
