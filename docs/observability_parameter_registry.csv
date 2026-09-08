@@ -1,0 +1,15 @@
+parameter,symbol,unit,values_used,evidence_status,source_or_rationale
+receiver_clock_range_bias,b,m,not directly swept,definition supported,https://gssc.esa.int/navipedia/index.php/GNSS_Basic_Observables
+receiver_clock_range_drift,d,m/s,not directly swept,derived state definition,time derivative of range-equivalent clock bias
+sampling_interval,dt,s,1.0,controlled design choice,one-second audit epoch
+pseudorange_sigma,sigma_rho,m,10 and asymmetric 20,sensitivity value only,no lunar service-performance claim
+initial_position_sigma,sigma_p0,m,0.1; 1; 10,sensitivity value only,gauge and prior-dependence audit
+initial_clock_bias_sigma,sigma_b0,m,0.1; 1; 10; 100; 1000000,sensitivity value only,log-scale prior relaxation
+initial_clock_drift_sigma,sigma_d0,m/s,1.0,sensitivity value only,not fitted to an oscillator
+initial_clock_drift_sigma_scan,sigma_d0,m/s,0.01; 0.1; 1; 10; 1000000,sensitivity value only,one-factor-at-a-time prior audit
+bias_random_walk_density,sqrt_q_b,m/sqrt(s),1.0,sensitivity value only,simple discrete random-walk model
+drift_random_walk_density,sqrt_q_d,m/s/sqrt(s),0.1,sensitivity value only,simple discrete drift random-walk model
+clock_noise_characterization,Allan deviation,dimensionless versus averaging time,not converted yet,method reference only,https://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication1065.pdf
+odometry_weak_increment_sigma,sigma_weak,m,1.0,sensitivity value only,inverse square root of controlled information 1
+odometry_strong_increment_sigma,sigma_strong,m,0.1,sensitivity value only,inverse square root of controlled information 100
+strictly_removed_prior,information_prior,1/state_unit^2,0,structural audit value,exact zero information; not a large finite sigma

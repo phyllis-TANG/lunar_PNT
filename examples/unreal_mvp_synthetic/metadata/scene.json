@@ -1,0 +1,23 @@
+{
+  "extent_m": [
+    20,
+    20
+  ],
+  "limitations": "Synthetic interface fixture; not an Unreal export or lunar terrain.",
+  "route_N_m": [
+    [
+      0,
+      0
+    ],
+    [
+      1,
+      0
+    ],
+    [
+      1,
+      1
+    ]
+  ],
+  "scene_id": "deterministic_text_fixture",
+  "schema_version": "unreal-mvp-interface-v1"
+}
