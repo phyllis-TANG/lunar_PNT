@@ -3,3 +3,10 @@ __pycache__/
 docs/figures/*.png
 docs/figures/*.jpg
 docs/figures/*.jpeg
+Binaries/
+Intermediate/
+DerivedDataCache/
+Saved/
+Build/
+*.uasset
+*.umap
