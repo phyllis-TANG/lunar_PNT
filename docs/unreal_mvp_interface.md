@@ -190,6 +190,22 @@ run_<UTC_creation_time>_<seed>/
 
 大型仿真输出属于外部数据，不提交到 Git；仓库只保存 schema、小型文本示例、生成配置和校验摘要。
 
+`lidar/index.csv` 字段固定为：
+
+```csv
+timestamp_ns,frame_index,points_path,scan_start_ns,scan_end_ns
+0,0,lidar/frames/0.csv,0,100000000
+```
+
+其中 `points_path` 必须是数据集根目录内的相对路径；每点 `time_offset_ns` 必须落在 `[0, scan_end_ns-scan_start_ns]`。`events.csv` 字段固定为：
+
+```csv
+timestamp_ns,sensor,event_type,expected_frame_index,reason
+1200000000,lidar,dropped_frame,12,render_deadline_missed
+```
+
+正常无事件时仍保留表头。缺帧必须由计划时间、传感器、预期帧号和原因解释，不能通过重编号隐藏。
+
 ## 8. 与外部伪距/钟代码的连接
 
 1. 读取 `truth/trajectory.csv` 的 `T_N_B(t)` 和 `metadata/calibration.json` 的 `T_B_A`，计算天线真值 `p_N_A(t)`。
@@ -241,3 +257,22 @@ flowchart LR
 8. 保存配置、随机种子、软件版本、文本 schema 和校验摘要；不提交大型数据或 Unreal 缓存。
 
 达到以上标准只表示接口和最小数据流跑通，不表示场景具有真实月壤物理性质，也不表示卫星辅助定位有效。
+
+## 10. 可执行校验范围
+
+- **合成接口样例**（`--scope synthetic`）：要求真值、IMU、LiDAR 文本及外部卫星/钟/伪距表；相机 RGB、深度和 Unreal 引擎行为明确报告为未覆盖。
+- **完整 Unreal 导出**（`--scope complete`）：额外要求相机索引及其引用的真实 RGB/深度文件存在。文件存在不等于已经验证编码、像素内容或深度物理正确性。
+
+UE 原生 actor 输出必须先按第 2 节转换；已经由传感器插件输出为 ENU/FLU/optical 的数据不得重复转换，插件和版本必须写入元数据。位置基变换不能直接套用于轴向矢量：角速度是伪矢量，其跨手性表达必须由引擎适配器按照已核实约定处理。本仓库仅验证输入旋转矩阵；UE yaw/pitch/roll 的引擎正方向和插件坐标仍待实机测试。
+
+运行确定性文本样例：
+
+```bash
+python tools/generate_unreal_fixture.py --output .local/unreal_mvp_synthetic
+python tools/validate_unreal_dataset.py .local/unreal_mvp_synthetic --scope synthetic --report .local/unreal_mvp_synthetic/validation_report.json
+python tools/validate_unreal_dataset.py .local/unreal_mvp_synthetic --scope complete
+```
+
+第三条命令应失败，因为样例故意不伪造 RGB/EXR。校验器检查 schema、数值和跨表关系，但不能仅凭文本确认 Unreal 欧拉角方向、插件是否重复换轴、图像内容、LiDAR 光线物理或时间戳在引擎中的实际行为。
+
+生成器仅接受新目录或空目录，不删除已有内容；重复运行请使用新的输出目录。完整校验要求引用文件为非空普通文件，仍不验证图像解码或像素内容。
