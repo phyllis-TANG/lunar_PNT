@@ -1,0 +1,10 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "0.1.0",
+  "FriendlyName": "Lunar PNT Unreal MVP Smoke Exporter",
+  "Description": "Exports engine-native actor transforms and converted ENU/FLU truth for the v1 smoke test.",
+  "Category": "Testing",
+  "CanContainContent": false,
+  "Modules": [{"Name": "UnrealMvpSmoke", "Type": "Runtime", "LoadingPhase": "Default"}]
+}

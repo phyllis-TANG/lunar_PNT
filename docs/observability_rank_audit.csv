@@ -1,0 +1,12 @@
+clock_model,configuration,position_prior_present,clock_bias_prior_present,clock_drift_prior_present,clock_process_rank,clock_process_nullity,unassisted_full_rank,unassisted_full_nullity,assisted_full_rank,assisted_full_nullity,unassisted_absolute_position_observable,assisted_absolute_position_observable,unassisted_absolute_std_m,assisted_absolute_std_m,unassisted_relative_displacement_observable,assisted_relative_displacement_observable,unassisted_relative_displacement_std_m,assisted_relative_displacement_std_m
+random_walk,all_priors,True,True,not_applicable,5,0,20,0,20,0,True,True,2.236067977499757,2.143867018389478,True,True,1.9999999999999674,1.9439628367782202
+random_walk,no_clock_bias_prior,True,False,not_applicable,4,1,19,1,20,0,True,True,2.236067977499757,2.1439020919012877,True,True,1.9999999999999674,1.9439790800960135
+random_walk,no_clock_priors,True,False,not_applicable,4,1,19,1,20,0,True,True,2.236067977499757,2.1439020919012877,True,True,1.9999999999999674,1.9439790800960135
+random_walk,no_position_prior,False,True,not_applicable,5,0,17,3,20,0,False,True,,89.94709465534531,True,True,2.0000000000000067,1.9999965145520133
+random_walk,no_priors,False,False,not_applicable,4,1,16,4,19,1,False,False,,,True,True,2.0000000000000067,2.0
+bias_drift,all_priors,True,True,True,10,0,25,0,25,0,True,True,2.236067977499757,2.1438873664520584,True,True,1.9999999999999674,1.9439830663556104
+bias_drift,no_clock_bias_prior,True,False,True,9,1,24,1,25,0,True,True,2.236067977499757,2.143914996560285,True,True,1.9999999999999674,1.943994228133153
+bias_drift,no_clock_drift_prior,True,True,False,9,1,24,1,25,0,True,True,2.236067977499757,2.1439780628676535,True,True,1.9999999999999674,1.9440731963725348
+bias_drift,no_clock_priors,True,False,False,8,2,23,2,25,0,True,True,2.236067977499757,2.143982268078945,True,True,1.9999999999999674,1.944073196653896
+bias_drift,no_position_prior,False,True,True,10,0,22,3,25,0,False,True,,89.9775934197814,True,True,2.0000000000000067,1.9999965145295033
+bias_drift,no_priors,False,False,False,8,2,20,5,24,1,False,False,,,True,True,2.0000000000000067,1.9999999850988388

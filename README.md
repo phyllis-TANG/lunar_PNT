@@ -3,9 +3,9 @@
 
 面向月球表面机器人的定位、导航与授时（Lunar PNT）研究工作区。
 
-**当前状态：选题核查与可行性验证。尚未确定最终论文题目，尚无本项目的实验结果。**
+**当前状态：选题核查与可行性验证。已完成受控线性可观测性审计，但尚未确定最终论文题目，也尚无真实数据融合或实际定位性能结果。**
 
-背景整理日期：2026-09-07。计划在 2026 年 11 月中旬左右形成一篇完整、可投稿的会议论文；目标会议尚未确定。这是工作目标，不代表录用或发表承诺。
+背景整理日期：2026-09-08。计划在 2026 年 11 月中旬左右形成一篇完整、可投稿的会议论文；目标会议尚未确定。这是工作目标，不代表录用或发表承诺。
 
 ## 1. 项目目标
 
@@ -38,15 +38,45 @@
 
 完整背景、此前讨论及判断标准见 [研究交接说明](docs/research_brief.md)。
 
+针对这一候选方向的最新案头评估、收窄问题、数据门禁、最小融合基线和两周停止条件，见 [候选课题评估](docs/candidate_topic_assessment.md)。该文档仍属于验证计划，不代表课题已经选定或获得实验支持。
+
+获得更多执行权限后仍应按“有限窗口秩审计 → 最小数据样本审计 → 全文差异确认 → 单一前后端集成”的顺序推进；权限本身不构成跳过科学门禁的理由。
+
+当前已加入并运行第一个受控几何单元试验：`python tools/observability_audit.py`。它只检查伪距与钟状态的线性化秩，不使用真实月球轨道或传感器数据，输出不能解释为定位性能结论。运行结果、限制和下一步见 [可辨识性审计](docs/observability_audit.md)。
+
+量纲化先验扫描和非对称几何扫描可分别通过 `--prior-scan-output` 与 `--geometry-scan-output` 生成；仓库中的参数登记表会区分定义／方法来源与仅用于敏感性分析的数值。
+
+审计收尾还提供 `--drift-prior-output`、`--rank-audit-output`、`--clock-geometry-output` 和 `--figure-dir`，用于区分末端绝对位置与起终点相对位移、严格检查无先验零空间，并生成三张可文本审查的 SVG 对照曲线。
+
+本轮建立了[针对性文献证据审计框架](docs/literature_evidence_matrix.md)、[物理参数证据表](docs/physical_parameter_evidence.csv)，并冻结[Unreal 第一版输出接口](docs/unreal_mvp_interface.md)。七项来源中只有 LuSNAR 官方仓库得到直接核查，其余六项仍待全文核实；接口只冻结文本合同，不表示文献审计已经完成或 Unreal 场景已经搭建。
+
 ## 3. 仓库当前包含什么
 
 ```text
 README.md                   项目入口、当前状态与起步流程
 docs/
   research_brief.md         完整研究背景、候选方案和验证边界
+  candidate_topic_assessment.md  候选课题收窄与验证门禁
+  observability_audit.md    已运行的受控可观测性审计及边界
+  literature_evidence_matrix.md  核心来源的证据状态与待核字段
+  physical_parameter_evidence.csv  参数数值、单位、来源和证据等级
+  unreal_mvp_interface.md   Unreal 与外部导航观测的最小接口
+tools/observability_audit.py  可复现审计与文本/SVG结果生成
+tests/test_observability_audit.py  审计回归测试
 ```
 
-当前仅提供研究说明。尚未建立可运行的定位系统、依赖清单、数据下载脚本或实验命令。请勿将旧项目报告中已经完成的工作，理解为本仓库已经包含并验证了对应代码。
+当前包含可运行的受控线性审计、测试和生成结果，但尚未建立真实数据定位系统、Unreal 工程、数据下载脚本或完整融合后端。请勿把受控协方差结果理解为真实月球定位性能，也不要将旧项目报告中记录的工作视为已经迁入并验证。
+
+Unreal MVP 接口可在无引擎依赖的文本样例上执行校验：
+
+```bash
+python tools/generate_unreal_fixture.py --output examples/unreal_mvp_synthetic
+python tools/validate_unreal_dataset.py examples/unreal_mvp_synthetic --scope synthetic --report examples/unreal_mvp_synthetic/validation_report.json
+```
+
+`synthetic` 范围不会假装验证不存在的 RGB/深度文件；`complete` 范围则要求完整导出及引用文件存在。两者都不能替代 Unreal 引擎内坐标、欧拉角正方向、插件输出帧和时间戳行为的实测。
+
+第一次 Unreal 引擎内 smoke test 的可安装 C++ 导出组件与人工验收步骤见[执行包](docs/unreal_engine_smoke_test.md)。当前云端没有 Unreal Engine，故该文档和组件是待本地执行的交付，不是引擎验证结果。
 
 ## 4. 如何开始
 

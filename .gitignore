@@ -1,0 +1,12 @@
+__pycache__/
+*.py[cod]
+docs/figures/*.png
+docs/figures/*.jpg
+docs/figures/*.jpeg
+Binaries/
+Intermediate/
+DerivedDataCache/
+Saved/
+Build/
+*.uasset
+*.umap
