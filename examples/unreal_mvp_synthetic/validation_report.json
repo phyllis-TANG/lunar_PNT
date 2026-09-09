@@ -1,0 +1,22 @@
+{
+  "schema_version": "unreal-mvp-interface-v1",
+  "scope": "synthetic",
+  "valid": true,
+  "errors": [],
+  "warnings": [
+    {
+      "path": "camera/frames.csv",
+      "message": "not covered by synthetic scope: RGB/depth files and their contents"
+    },
+    {
+      "path": "engine-adapter",
+      "message": "Unreal Euler signs, plugin-native frames, rendered file contents, and timestamp behavior require in-engine validation"
+    }
+  ],
+  "covered": [
+    "external_navigation",
+    "imu",
+    "lidar",
+    "truth"
+  ]
+}

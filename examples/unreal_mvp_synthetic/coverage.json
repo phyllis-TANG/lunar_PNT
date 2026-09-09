@@ -1,0 +1,14 @@
+{
+  "scope": "synthetic",
+  "covered": [
+    "truth",
+    "imu",
+    "lidar",
+    "external_navigation"
+  ],
+  "not_covered": [
+    "camera_rgb",
+    "camera_depth",
+    "Unreal engine conventions"
+  ]
+}
