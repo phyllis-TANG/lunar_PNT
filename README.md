@@ -70,8 +70,8 @@ tests/test_observability_audit.py  审计回归测试
 Unreal MVP 接口可在无引擎依赖的文本样例上执行校验：
 
 ```bash
-python tools/generate_unreal_fixture.py --output examples/unreal_mvp_synthetic
-python tools/validate_unreal_dataset.py examples/unreal_mvp_synthetic --scope synthetic --report examples/unreal_mvp_synthetic/validation_report.json
+python tools/generate_unreal_fixture.py --output .local/unreal_mvp_synthetic
+python tools/validate_unreal_dataset.py .local/unreal_mvp_synthetic --scope synthetic --report .local/unreal_mvp_synthetic/validation_report.json
 ```
 
 `synthetic` 范围不会假装验证不存在的 RGB/深度文件；`complete` 范围则要求完整导出及引用文件存在。两者都不能替代 Unreal 引擎内坐标、欧拉角正方向、插件输出帧和时间戳行为的实测。
@@ -125,3 +125,5 @@ python tools/validate_unreal_dataset.py examples/unreal_mvp_synthetic --scope sy
 整体项目关注“导航可信程度影响机器人行动，行动又改变后续观测条件”。本仓库先研究其中的估计与测距辅助问题。
 
 完好性保护水平、主动恢复规划、服务调度和具身学习可作为后续扩展。第一阶段不把它们作为必须实现的内容，也不将普通协方差或误差统计称为经过证明的完好性保障。
+
+生成器仅接受新目录或空目录，不删除已有内容；重复运行请使用新的输出目录。完整校验要求引用文件为非空普通文件，仍不验证图像解码或像素内容。

@@ -45,7 +45,10 @@ def safe_path(root,value,rel,report,row):
  try:
   p=(root/value).resolve(); p.relative_to(root.resolve())
  except Exception: report.error(rel,f"path escapes dataset root: {value}",row); return None
- if not p.exists(): report.error(rel,f"referenced file does not exist: {value}",row)
+ if not p.is_file():
+  report.error(rel,f"referenced path is not a regular file: {value}",row); return None
+ if p.stat().st_size == 0:
+  report.error(rel,f"referenced file is empty: {value}",row); return None
  return p
 
 def check_regular(rows, rate, rel, sensor, event_rows, report):

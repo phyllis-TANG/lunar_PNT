@@ -1,6 +1,9 @@
 #include "UnrealMvpSmokeExportComponent.h"
 
 #include "Dom/JsonObject.h"
+#include "GameFramework/Actor.h"
+#include "HAL/FileManager.h"
+#include "Misc/EngineVersion.h"
 #include "HAL/PlatformFileManager.h"
 #include "Misc/FileHelper.h"
 #include "Misc/Paths.h"
@@ -32,12 +35,36 @@ FMat3 ConvertRotation(const FMat3& R)
 
 void MatrixToWxyz(const FMat3& R, double& W,double& X,double& Y,double& Z)
 {
-    W=FMath::Sqrt(FMath::Max(0.,1.+R.V[0][0]+R.V[1][1]+R.V[2][2]))/2.;
-    X=FMath::CopySign(FMath::Sqrt(FMath::Max(0.,1.+R.V[0][0]-R.V[1][1]-R.V[2][2]))/2.,R.V[2][1]-R.V[1][2]);
-    Y=FMath::CopySign(FMath::Sqrt(FMath::Max(0.,1.-R.V[0][0]+R.V[1][1]-R.V[2][2]))/2.,R.V[0][2]-R.V[2][0]);
-    Z=FMath::CopySign(FMath::Sqrt(FMath::Max(0.,1.-R.V[0][0]-R.V[1][1]+R.V[2][2]))/2.,R.V[1][0]-R.V[0][1]);
-    const double N=FMath::Sqrt(W*W+X*X+Y*Y+Z*Z); W/=N; X/=N; Y/=N; Z/=N;
-    if(W<0) {W=-W;X=-X;Y=-Y;Z=-Z;}
+    // Select the largest component to retain relative axis signs at half turns.
+    double Q[4]{};
+    const double Trace=R.V[0][0]+R.V[1][1]+R.V[2][2];
+    if(Trace>0.)
+    {
+        const double S=2.*FMath::Sqrt(Trace+1.);
+        Q[0]=S/4.; Q[1]=(R.V[2][1]-R.V[1][2])/S;
+        Q[2]=(R.V[0][2]-R.V[2][0])/S; Q[3]=(R.V[1][0]-R.V[0][1])/S;
+    }
+    else
+    {
+        int I=0;
+        if(R.V[1][1]>R.V[I][I]) I=1;
+        if(R.V[2][2]>R.V[I][I]) I=2;
+        const int J=(I+1)%3, K=(I+2)%3;
+        const double S=2.*FMath::Sqrt(FMath::Max(0.,1.+R.V[I][I]-R.V[J][J]-R.V[K][K]));
+        Q[0]=(R.V[K][J]-R.V[J][K])/S; Q[I+1]=S/4.;
+        Q[J+1]=(R.V[J][I]+R.V[I][J])/S; Q[K+1]=(R.V[K][I]+R.V[I][K])/S;
+    }
+    const double N=FMath::Sqrt(Q[0]*Q[0]+Q[1]*Q[1]+Q[2]*Q[2]+Q[3]*Q[3]);
+    for(double& Value : Q) Value/=N;
+    for(int I=0;I<4;++I)
+    {
+        if(FMath::Abs(Q[I])>1e-15)
+        {
+            if(Q[I]<0.) for(double& Value : Q) Value=-Value;
+            break;
+        }
+    }
+    W=Q[0]; X=Q[1]; Y=Q[2]; Z=Q[3];
 }
 }
 

@@ -268,9 +268,11 @@ UE 原生 actor 输出必须先按第 2 节转换；已经由传感器插件输�
 运行确定性文本样例：
 
 ```bash
-python tools/generate_unreal_fixture.py --output examples/unreal_mvp_synthetic
-python tools/validate_unreal_dataset.py examples/unreal_mvp_synthetic --scope synthetic --report examples/unreal_mvp_synthetic/validation_report.json
-python tools/validate_unreal_dataset.py examples/unreal_mvp_synthetic --scope complete
+python tools/generate_unreal_fixture.py --output .local/unreal_mvp_synthetic
+python tools/validate_unreal_dataset.py .local/unreal_mvp_synthetic --scope synthetic --report .local/unreal_mvp_synthetic/validation_report.json
+python tools/validate_unreal_dataset.py .local/unreal_mvp_synthetic --scope complete
 ```
 
 第三条命令应失败，因为样例故意不伪造 RGB/EXR。校验器检查 schema、数值和跨表关系，但不能仅凭文本确认 Unreal 欧拉角方向、插件是否重复换轴、图像内容、LiDAR 光线物理或时间戳在引擎中的实际行为。
+
+生成器仅接受新目录或空目录，不删除已有内容；重复运行请使用新的输出目录。完整校验要求引用文件为非空普通文件，仍不验证图像解码或像素内容。

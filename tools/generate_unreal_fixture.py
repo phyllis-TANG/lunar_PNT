@@ -1,6 +1,6 @@
 """Generate a deterministic, text-only Unreal MVP interface fixture."""
 from __future__ import annotations
-import argparse, csv, json, math, shutil
+import argparse, csv, json, math
 from pathlib import Path
 import numpy as np
 from unreal_coordinates import Transform, antenna_position, matrix_to_quaternion_wxyz
@@ -16,7 +16,11 @@ def write_csv(path, fields, rows):
         w=csv.DictWriter(f,fieldnames=fields,lineterminator='\n'); w.writeheader(); w.writerows(rows)
 
 def generate(root: Path):
-    if root.exists(): shutil.rmtree(root)
+    root = Path(root)
+    if root.exists() and (not root.is_dir() or any(root.iterdir())):
+        raise FileExistsError(
+            f"Output must be a new or empty directory; nothing was removed: {root}"
+        )
     (root/'metadata').mkdir(parents=True); (root/'truth').mkdir(); (root/'imu').mkdir(); (root/'lidar/frames').mkdir(parents=True); (root/'external').mkdir()
     calibration={"schema_version":SCHEMA,"quaternion_order":"wxyz","transform_semantics":"p_parent=R_parent_child*p_child+t_parent_child","camera_left":{"model":"pinhole","width":1024,"height":1024,"fx_px":610.,"fy_px":610.,"cx_px":511.5,"cy_px":511.5,"distortion":[0,0,0,0]},"camera_right":{"width":1024,"height":1024},"extrinsics":{"T_B_C0":{"translation_m":[0.8,0.155,0.7],"quaternion_wxyz":[0.5,-0.5,0.5,-0.5]},"T_B_C1":{"translation_m":[0.8,-0.155,0.7],"quaternion_wxyz":[0.5,-0.5,0.5,-0.5]},"T_B_L":{"translation_m":[0.5,0,0.8],"quaternion_wxyz":[1,0,0,0]},"T_B_I":{"translation_m":[0,0,0],"quaternion_wxyz":[1,0,0,0]},"T_B_A":{"translation_m":[1,0,1],"quaternion_wxyz":[1,0,0,0]}}}
     simulation={"schema_version":SCHEMA,"fixture_kind":"deterministic_synthetic_partial","fixed_step_s":0.1,"gravity_N_mps2":[0,0,-1.625],"truth_rate_hz":10,"imu_rate_hz":10,"lidar_rate_hz":2,"lidar":{"channels":4,"scan_period_ns":500000000},"sensor_noise":{"camera":{"model":"disabled-v1"},"lidar":{"model":"disabled-v1"},"imu":{"model":"disabled-v1"}}}

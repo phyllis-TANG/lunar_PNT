@@ -7,6 +7,9 @@ from validate_unreal_dataset import validate
 class ValidatorTest(unittest.TestCase):
     def setUp(self): self.tmp=tempfile.TemporaryDirectory(); self.root=Path(self.tmp.name)/'fixture'; generate(self.root)
     def tearDown(self): self.tmp.cleanup()
+    def reset_fixture(self):
+        self.tmp.cleanup()
+        self.setUp()
     def rewrite(self,rel,mutate):
         p=self.root/rel
         with p.open(newline='') as f: r=csv.DictReader(f); rows=list(r); fields=r.fieldnames
@@ -25,7 +28,7 @@ class ValidatorTest(unittest.TestCase):
     def test_time_mismatch_and_duplicate_satellite_key(self):
         self.rewrite('external/receiver_clock.csv',lambda rows,_: rows.pop())
         self.assertIn('truth/clock correspondence',self.messages())
-        generate(self.root)
+        self.reset_fixture()
         self.rewrite('external/pseudorange.csv',lambda rows,_: rows.append(rows[0].copy()))
         self.assertIn('duplicate record key',self.messages())
     def test_unexplained_sampling_gap(self):
@@ -34,7 +37,7 @@ class ValidatorTest(unittest.TestCase):
     def test_lidar_offset_and_missing_or_escaping_path(self):
         self.rewrite('lidar/frames/0.csv',lambda rows,_: rows[0].update(time_offset_ns='500000001'))
         self.assertIn('outside scan interval',self.messages())
-        generate(self.root); self.rewrite('lidar/index.csv',lambda rows,_: rows[0].update(points_path='../escape.csv'))
+        self.reset_fixture(); self.rewrite('lidar/index.csv',lambda rows,_: rows[0].update(points_path='../escape.csv'))
         self.assertIn('escapes dataset root',self.messages())
     def test_wrong_los_direction(self):
         self.rewrite('external/pseudorange.csv',lambda rows,_: rows[0].update(los_N_x='1',los_N_y='0',los_N_z='0'))
@@ -45,3 +48,26 @@ class ValidatorTest(unittest.TestCase):
     def test_bad_antenna_lever_arm_exposes_geometry_disagreement(self):
         p=self.root/'metadata/calibration.json'; d=json.loads(p.read_text()); d['extrinsics']['T_B_A']['translation_m']=[0,0,0]; p.write_text(json.dumps(d))
         self.assertIn('LOS direction disagrees',self.messages())
+
+    def test_generator_refuses_existing_nonempty_output(self):
+        marker=self.root/'keep.txt'; marker.write_text('user data')
+        with self.assertRaises(FileExistsError): generate(self.root)
+        self.assertEqual(marker.read_text(),'user data')
+        self.assertTrue((self.root/'truth/trajectory.csv').is_file())
+
+    def test_complete_rejects_empty_files_and_directories(self):
+        camera=self.root/'camera'; camera.mkdir()
+        for name in ('left.png','right.png','depth.exr'): (camera/name).touch()
+        index=camera/'frames.csv'
+        index.write_text(
+            'timestamp_ns,frame_index,left_rgb_path,right_rgb_path,left_depth_path\n'
+            '0,0,camera/left.png,camera/right.png,camera/depth.exr\n'
+        )
+        report=validate(self.root,'complete')
+        self.assertFalse(report.data()['valid'])
+        self.assertTrue(any('file is empty' in e['message'] for e in report.errors))
+        (camera/'left.png').unlink(); (camera/'left.png').mkdir()
+        report=validate(self.root,'complete')
+        self.assertTrue(
+            any('not a regular file' in e['message'] for e in report.errors)
+        )
