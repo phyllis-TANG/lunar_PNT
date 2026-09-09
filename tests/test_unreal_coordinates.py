@@ -35,3 +35,12 @@ class CoordinateTest(unittest.TestCase):
 
     def test_improper_matrix_cannot_be_quaternion(self):
         with self.assertRaises(ValueError): matrix_to_quaternion_wxyz(np.diag([1,1,-1]))
+
+    def test_half_turn_mixed_axis_preserves_relative_signs(self):
+        rotation=np.array([[0.,-1.,0.],[-1.,0.,0.],[0.,0.,-1.]])
+        quaternion=matrix_to_quaternion_wxyz(rotation)
+        np.testing.assert_allclose(
+            quaternion_wxyz_to_matrix(quaternion),rotation,atol=1e-12
+        )
+        self.assertAlmostEqual(quaternion[0],0.)
+        self.assertLess(quaternion[1]*quaternion[2],0.)

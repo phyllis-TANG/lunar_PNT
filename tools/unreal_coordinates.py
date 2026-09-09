@@ -49,12 +49,27 @@ def unreal_actor_rotation_to_enu_body(rotation_u_fru) -> np.ndarray:
 
 def matrix_to_quaternion_wxyz(rotation) -> np.ndarray:
     r = validate_rotation(rotation)
-    w = np.sqrt(max(0., 1. + np.trace(r))) / 2.
-    x = np.copysign(np.sqrt(max(0., 1. + r[0, 0] - r[1, 1] - r[2, 2])) / 2., r[2, 1] - r[1, 2])
-    y = np.copysign(np.sqrt(max(0., 1. - r[0, 0] + r[1, 1] - r[2, 2])) / 2., r[0, 2] - r[2, 0])
-    z = np.copysign(np.sqrt(max(0., 1. - r[0, 0] - r[1, 1] + r[2, 2])) / 2., r[1, 0] - r[0, 1])
-    q = np.array([w, x, y, z]); q /= np.linalg.norm(q)
-    return q if q[0] >= 0 else -q
+    trace = np.trace(r)
+    if trace > 0.:
+        s = 2. * np.sqrt(trace + 1.)
+        q = np.array([
+            s / 4.,
+            (r[2, 1] - r[1, 2]) / s,
+            (r[0, 2] - r[2, 0]) / s,
+            (r[1, 0] - r[0, 1]) / s,
+        ])
+    else:
+        i = int(np.argmax(np.diag(r)))
+        j, k = (i + 1) % 3, (i + 2) % 3
+        s = 2. * np.sqrt(max(0., 1. + r[i, i] - r[j, j] - r[k, k]))
+        q = np.zeros(4)
+        q[0] = (r[k, j] - r[j, k]) / s
+        q[i + 1] = s / 4.
+        q[j + 1] = (r[j, i] + r[i, j]) / s
+        q[k + 1] = (r[k, i] + r[i, k]) / s
+    q /= np.linalg.norm(q)
+    first_nonzero = next((value for value in q if abs(value) > 1e-15), 1.)
+    return q if first_nonzero >= 0. else -q
 
 
 def quaternion_wxyz_to_matrix(quaternion) -> np.ndarray:
@@ -92,4 +107,3 @@ def antenna_position(position_n_b, rotation_n_b, lever_arm_b_a) -> np.ndarray:
 
 def sensor_pose(body_pose: Transform, body_to_sensor: Transform) -> Transform:
     return body_pose.compose(body_to_sensor)
-

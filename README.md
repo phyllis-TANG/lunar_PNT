@@ -70,11 +70,15 @@ tests/test_observability_audit.py  审计回归测试
 Unreal MVP 接口可在无引擎依赖的文本样例上执行校验：
 
 ```bash
-python tools/generate_unreal_fixture.py --output examples/unreal_mvp_synthetic
-python tools/validate_unreal_dataset.py examples/unreal_mvp_synthetic --scope synthetic --report examples/unreal_mvp_synthetic/validation_report.json
+python tools/generate_unreal_fixture.py --output .local/unreal_mvp_synthetic
+python tools/validate_unreal_dataset.py .local/unreal_mvp_synthetic --scope synthetic --report .local/unreal_mvp_synthetic/validation_report.json
 ```
 
 `synthetic` 范围不会假装验证不存在的 RGB/深度文件；`complete` 范围则要求完整导出及引用文件存在。两者都不能替代 Unreal 引擎内坐标、欧拉角正方向、插件输出帧和时间戳行为的实测。
+
+生成器只接受新目录或空目录，不会删除已有内容。仓库中的
+`examples/unreal_mvp_synthetic` 是可直接校验的参考样例；重新生成时使用
+`.local` 下的新路径。
 
 ## 4. 如何开始
 
