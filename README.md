@@ -56,7 +56,13 @@ docs/
   roscar_reference_catalog.md
                             论文、开源仓库、数据集与月球/仿真迁移资料
 references.bib              当前核心文献的 BibTeX 入口
+ppt_month_plan/
+  output/                   深圳研究院双车协同定位月度计划（中英双语 PPT）
+  assets/                   演示文稿背景素材
+  render_v2/                最新版本逐页预览图
 ```
+
+演示文稿当前推荐使用 `ppt_month_plan/output/深圳研究院双车协同定位月度计划_双语_v2.pptx`；`v1` 与对应渲染文件保留用于版本比较。
 
 当前仅提供研究说明。尚未建立可运行的定位系统、依赖清单、数据下载脚本或实验命令。请勿将旧项目报告中已经完成的工作，理解为本仓库已经包含并验证了对应代码。
 
