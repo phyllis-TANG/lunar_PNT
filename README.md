@@ -98,6 +98,12 @@ python tools/validate_unreal_dataset.py .local/unreal_mvp_synthetic --scope synt
 
 当前阶段无需预先安装 Unreal、完整 ROS 生态或训练环境。云端环境可以先保持默认运行时；完成数据检查后，再固定所需依赖与安装步骤。
 
+## ROS Car 双车协同定位规划
+
+仓库现提供一份面向两台 ROS 小车的[协同定位与 UWB 分阶段实施计划](docs/ros_car_dual_vehicle_uwb_plan.md)，包含可观测性边界、ROS topic/TF 合同、标定与时间同步门禁、实验矩阵、失败降级和验收指标。这是后续实现的设计基线，不代表双车系统已经搭建或测试。
+
+配套材料包括[参考资料导读](docs/reference_materials.md)、根目录 [`references.bib`](references.bib)，以及可编辑的[中英双语演示稿源文件](slides/ros_car_uwb_bilingual.md)。为保持 Pull Request 纯文本可审查，生成的 `.pptx` 不纳入 Git；安装依赖后运行 `python tools/generate_bilingual_ppt.py` 即可在 `slides/` 下生成 PowerPoint 文件。
+
 ## 5. 候选资源
 
 | 资源 | 初步用途 | 当前核实程度 |

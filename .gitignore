@@ -11,3 +11,6 @@ Build/
 *.uasset
 *.umap
 /.local/
+
+# Generated presentation artifacts (rebuild from the tracked Markdown source).
+/slides/*.pptx
