@@ -1,0 +1,23 @@
+# Local review and temporary files
+ppt_review/
+tmp/
+
+# ROS workspaces and build products
+build/
+devel/
+install/
+log/
+.catkin_tools/
+
+# Recorded sensor data and large datasets
+*.bag
+*.db3
+bags/
+data/
+datasets/
+
+# Generated caches
+__pycache__/
+*.pyc
+.vscode/
+.idea/

@@ -1,0 +1,303 @@
+{"kind":"deck","id":"pr/1xzw0w","name":"Deck"}
+{"kind":"layout","layoutId":"635400ad-08f4-442c-b453-029d09a065c1","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"a5739501-ec80-4741-a546-ecd998104110","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/jv39pf","slide":1,"title":"Page   1","textShapes":6}
+{"kind":"shape","id":"sh/f2hoba94","slide":1,"bbox":[1432,844,168,56]}
+{"kind":"textbox","id":"sh/u18ni58j","slide":1,"text":"Page   1","textPreview":"Page   1","textChars":8,"textLines":1,"bbox":[1450,853,135,30]}
+{"kind":"shape","id":"sh/t0z690ry","slide":1,"bbox":[110,258,12,285]}
+{"kind":"textbox","id":"sh/sz65gvqd","slide":1,"text":"深圳研究院月度研究计划","textPreview":"深圳研究院月度研究计划","textChars":11,"textLines":1,"bbox":[154,270,1030,82]}
+{"kind":"textbox","id":"sh/7yxo7q9s","slide":1,"text":"Monthly Research Plan at the Shenzhen Research Institute","textPreview":"Monthly Research Plan at the Shenzhen Research Institute","textChars":56,"textLines":1,"bbox":[158,356,1080,48]}
+{"kind":"textbox","id":"sh/6xonel8n","slide":1,"text":"双车协同定位与 UWB 地面验证","textPreview":"双车协同定位与 UWB 地面验证","textChars":16,"textLines":1,"bbox":[158,438,930,46]}
+{"kind":"textbox","id":"sh/dwj6l4ri","slide":1,"text":"Dual-Robot Cooperative Localization and UWB Ground Validation","textPreview":"Dual-Robot Cooperative Localization and UWB Ground Validation","textChars":61,"textLines":1,"bbox":[158,486,1040,38]}
+{"kind":"shape","id":"sh/cva5szqx","slide":1,"bbox":[158,563,720,2]}
+{"kind":"textbox","id":"sh/mxkj6h8f","slide":1,"text":"2026年9月  ·  ROS1 Melodic  ·  WHEELTEC ROS Car","textPreview":"2026年9月  ·  ROS1 Melodic  ·  WHEELTEC ROS Car","textChars":45,"textLines":1,"bbox":[158,588,820,34]}
+{"kind":"image","id":"im/5072h0vq","slide":1,"name":"","alt":"Hong Kong Polytechnic University AAE presentation background supplied by the user","bbox":[0,0,1600,900]}
+{"kind":"notes","id":"nt/jv39pf","slide":1,"text":"本页说明汇报主题。本月重点是两辆实体小车的地面验证，不把本月目标描述为已经完成月球导航系统。Template background supplied by the user."}
+{"kind":"slide","id":"sl/lhol3p","slide":2,"title":"Page   2","textShapes":25}
+{"kind":"shape","id":"sh/1kn6543m","slide":2,"bbox":[1432,844,168,56]}
+{"kind":"textbox","id":"sh/gje5cz21","slide":2,"text":"Page   2","textPreview":"Page   2","textChars":8,"textLines":1,"bbox":[1450,853,135,30]}
+{"kind":"shape","id":"sh/re5ozulk","slide":2,"bbox":[66,105,9,73]}
+{"kind":"textbox","id":"sh/6dwn6pkz","slide":2,"text":"当前基础与本月目标","textPreview":"当前基础与本月目标","textChars":9,"textLines":1,"bbox":[90,93,720,54]}
+{"kind":"textbox","id":"sh/tgn6143q","slide":2,"text":"Current Baseline and Monthly Target","textPreview":"Current Baseline and Monthly Target","textChars":35,"textLines":1,"bbox":[92,145,820,33]}
+{"kind":"shape","id":"sh/sfe58z25","slide":2,"bbox":[78,212,650,455]}
+{"kind":"shape","id":"sh/jaloval8","slide":2,"bbox":[790,212,728,455]}
+{"kind":"textbox","id":"sh/ipcn25k3","slide":2,"text":"已有基础","textPreview":"已有基础","textChars":4,"textLines":1,"bbox":[108,236,260,42]}
+{"kind":"textbox","id":"sh/872l83qt","slide":2,"text":"CURRENT BASELINE","textPreview":"CURRENT BASELINE","textChars":16,"textLines":1,"bbox":[430,244,250,28]}
+{"kind":"shape","id":"sh/t8bm18re","slide":2,"bbox":[112,309,12,12]}
+{"kind":"textbox","id":"sh/65036t8n","slide":2,"text":"单车底盘、SSH 与话题排查","textPreview":"单车底盘、SSH 与话题排查","textChars":14,"textLines":1,"bbox":[136,302,526,31]}
+{"kind":"textbox","id":"sh/769kzy98","slide":2,"text":"Chassis bring-up, SSH and ROS topic diagnostics","textPreview":"Chassis bring-up, SSH and ROS topic diagnostics","textChars":47,"textLines":1,"bbox":[136,333,526,28]}
+{"kind":"shape","id":"sh/k3il4jqh","slide":2,"bbox":[112,390,12,12]}
+{"kind":"textbox","id":"sh/l4r2xor2","slide":2,"text":"激光雷达跟随与二维建图","textPreview":"激光雷达跟随与二维建图","textChars":11,"textLines":1,"bbox":[136,383,526,31]}
+{"kind":"textbox","id":"sh/y10329sr","slide":2,"text":"LiDAR following and 2D mapping","textPreview":"LiDAR following and 2D mapping","textChars":30,"textLines":1,"bbox":[136,414,526,28]}
+{"kind":"shape","id":"sh/j29kve9w","slide":2,"bbox":[112,471,12,12]}
+{"kind":"textbox","id":"sh/4zmlgnq1","slide":2,"text":"AMCL 单点及多点导航","textPreview":"AMCL 单点及多点导航","textChars":12,"textLines":1,"bbox":[136,464,526,31]}
+{"kind":"textbox","id":"sh/50vm9srm","slide":2,"text":"AMCL localization and waypoint navigation","textPreview":"AMCL localization and waypoint navigation","textChars":41,"textLines":1,"bbox":[136,495,526,28]}
+{"kind":"shape","id":"sh/d47udofe","slide":2,"bbox":[112,552,12,12]}
+{"kind":"textbox","id":"sh/s3yt4jet","slide":2,"text":"串口、TF 与导航故障排查","textPreview":"串口、TF 与导航故障排查","textChars":13,"textLines":1,"bbox":[136,545,526,31]}
+{"kind":"textbox","id":"sh/r2pcbex8","slide":2,"text":"Serial, TF and navigation troubleshooting","textPreview":"Serial, TF and navigation troubleshooting","textChars":41,"textLines":1,"bbox":[136,576,526,28]}
+{"kind":"textbox","id":"sh/qhgb29wn","slide":2,"text":"月底目标","textPreview":"月底目标","textChars":4,"textLines":1,"bbox":[822,236,260,42]}
+{"kind":"textbox","id":"sh/5g7u94f2","slide":2,"text":"MONTH-END TARGET","textPreview":"MONTH-END TARGET","textChars":16,"textLines":1,"bbox":[1190,244,285,28]}
+{"kind":"shape","id":"sh/4fet0jex","slide":2,"bbox":[826,309,12,12]}
+{"kind":"textbox","id":"sh/3e5c7exc","slide":2,"text":"两辆车同时上线且互不干扰","textPreview":"两辆车同时上线且互不干扰","textChars":12,"textLines":1,"bbox":[850,302,576,31]}
+{"kind":"textbox","id":"sh/idwby9wr","slide":2,"text":"Two robots online with isolated control and data","textPreview":"Two robots online with isolated control and data","textChars":48,"textLines":1,"bbox":[850,333,576,28]}
+{"kind":"shape","id":"sh/hcnu54f6","slide":2,"bbox":[826,390,12,12]}
+{"kind":"textbox","id":"sh/gbetwzel","slide":2,"text":"UWB 测距完成标定和质量分析","textPreview":"UWB 测距完成标定和质量分析","textChars":15,"textLines":1,"bbox":[850,383,576,31]}
+{"kind":"textbox","id":"sh/6hcr65cj","slide":2,"text":"Calibrated UWB ranging with quality statistics","textPreview":"Calibrated UWB ranging with quality statistics","textChars":46,"textLines":1,"bbox":[850,414,576,28]}
+{"kind":"shape","id":"sh/7ilszad4","slide":2,"bbox":[826,471,12,12]}
+{"kind":"textbox","id":"sh/8ju98fup","slide":2,"text":"建立独立定位基线","textPreview":"建立独立定位基线","textChars":8,"textLines":1,"bbox":[850,464,576,31]}
+{"kind":"textbox","id":"sh/tk3a10vu","slide":2,"text":"Independent localization baseline for both robots","textPreview":"Independent localization baseline for both robots","textChars":49,"textLines":1,"bbox":[850,495,576,28]}
+{"kind":"shape","id":"sh/ydsr2lc7","slide":2,"bbox":[826,552,12,12]}
+{"kind":"textbox","id":"sh/je18vqds","slide":2,"text":"完成首个协同定位演示","textPreview":"完成首个协同定位演示","textChars":10,"textLines":1,"bbox":[850,545,576,31]}
+{"kind":"textbox","id":"sh/kfa94vud","slide":2,"text":"First cooperative-localization demonstration","textPreview":"First cooperative-localization demonstration","textChars":44,"textLines":1,"bbox":[850,576,576,28]}
+{"kind":"shape","id":"sh/lgjqx0vy","slide":2,"bbox":[78,748,1440,66]}
+{"kind":"textbox","id":"sh/apsrylcb","slide":2,"text":"范围控制：本月先完成地面系统闭环","textPreview":"范围控制：本月先完成地面系统闭环","textChars":16,"textLines":1,"bbox":[102,756,770,30]}
+{"kind":"textbox","id":"sh/bq18rqdw","slide":2,"text":"Scope: complete the ground-system loop this month","textPreview":"Scope: complete the ground-system loop this month","textChars":49,"textLines":1,"bbox":[890,758,600,28]}
+{"kind":"image","id":"im/3y9s7apg","slide":2,"name":"","alt":"Hong Kong Polytechnic University AAE presentation background supplied by the user","bbox":[0,0,1600,900]}
+{"kind":"notes","id":"nt/lhol3p","slide":2,"text":"左侧来自用户此前的 ROS Car 学习成果。右侧是本月可验证的目标，准确率改善仍需实验数据支持，因此不预设性能提升结论。"}
+{"kind":"slide","id":"sl/zemdl3","slide":3,"title":"Page   3","textShapes":14}
+{"kind":"shape","id":"sh/6147ix0z","slide":3,"bbox":[1432,844,168,56]}
+{"kind":"textbox","id":"sh/72dor2hk","slide":3,"text":"Page   3","textPreview":"Page   3","textChars":8,"textLines":1,"bbox":[1450,853,135,30]}
+{"kind":"shape","id":"sh/g76po7i1","slide":3,"bbox":[66,105,9,73]}
+{"kind":"textbox","id":"sh/h8f6xczm","slide":3,"text":"月底系统形态","textPreview":"月底系统形态","textChars":6,"textLines":1,"bbox":[90,93,720,54]}
+{"kind":"textbox","id":"sh/u547mh0b","slide":3,"text":"Target System Architecture at Month End","textPreview":"Target System Architecture at Month End","textChars":39,"textLines":1,"bbox":[92,145,820,33]}
+{"kind":"shape","id":"sh/v6xovmhg","slide":3,"bbox":[560,224,480,120]}
+{"kind":"textbox","id":"sh/4v6psrid","slide":3,"text":"虚拟机 / 中心端","textPreview":"虚拟机 / 中心端","textChars":9,"textLines":1,"bbox":[590,244,420,36]}
+{"kind":"textbox","id":"sh/5wfq1wzy","slide":3,"text":"ROS Master · RViz · rosbag · Fusion","textPreview":"ROS Master · RViz · rosbag · Fusion","textChars":35,"textLines":1,"bbox":[590,287,420,30]}
+{"kind":"shape","id":"sh/5gfep4f6","slide":3,"bbox":[150,475,450,170]}
+{"kind":"textbox","id":"sh/4f6xgzyl","slide":3,"text":"CAR 1","textPreview":"CAR 1","textChars":5,"textLines":1,"bbox":[180,495,95,35]}
+{"kind":"textbox","id":"sh/jexwnux0","slide":3,"text":"底盘 · 编码器里程计 · IMU · LiDAR","textPreview":"底盘 · 编码器里程计 · IMU · LiDAR","textChars":25,"textLines":1,"bbox":[180,543,385,32]}
+{"kind":"textbox","id":"sh/idofepgf","slide":3,"text":"Chassis · wheel odometry · IMU · LiDAR","textPreview":"Chassis · wheel odometry · IMU · LiDAR","textChars":38,"textLines":1,"bbox":[180,582,385,28]}
+{"kind":"shape","id":"sh/tkzet4f2","slide":3,"bbox":[1000,475,450,170]}
+{"kind":"textbox","id":"sh/sj6xkzyh","slide":3,"text":"CAR 2","textPreview":"CAR 2","textChars":5,"textLines":1,"bbox":[1030,495,95,35]}
+{"kind":"textbox","id":"sh/rixwruxc","slide":3,"text":"底盘 · 编码器里程计 · IMU · LiDAR","textPreview":"底盘 · 编码器里程计 · IMU · LiDAR","textChars":25,"textLines":1,"bbox":[1030,543,385,32]}
+{"kind":"textbox","id":"sh/6hofipgr","slide":3,"text":"Chassis · wheel odometry · IMU · LiDAR","textPreview":"Chassis · wheel odometry · IMU · LiDAR","textChars":38,"textLines":1,"bbox":[1030,582,385,28]}
+{"kind":"shape","id":"sh/9oveh0zy","slide":3,"bbox":[375,344,425,131]}
+{"kind":"shape","id":"sh/8nmx8fyd","slide":3,"bbox":[800,344,425,131]}
+{"kind":"shape","id":"sh/0rqx4f69","slide":3,"bbox":[600,560,400,0]}
+{"kind":"textbox","id":"sh/lszexk7u","slide":3,"text":"UWB 车间距离 / Inter-robot range","textPreview":"UWB 车间距离 / Inter-robot range","textChars":28,"textLines":1,"bbox":[603,518,395,34]}
+{"kind":"textbox","id":"sh/y5of25o3","slide":3,"text":"共享 map；两套独立 odom 与 TF","textPreview":"共享 map；两套独立 odom 与 TF","textChars":21,"textLines":1,"bbox":[466,682,668,33]}
+{"kind":"textbox","id":"sh/zqxwvapo","slide":3,"text":"Shared map with independent odometry and TF trees","textPreview":"Shared map with independent odometry and TF trees","textChars":49,"textLines":1,"bbox":[466,717,668,27]}
+{"kind":"image","id":"im/gvuhgje1","slide":3,"name":"","alt":"Hong Kong Polytechnic University AAE presentation background supplied by the user","bbox":[0,0,1600,900]}
+{"kind":"notes","id":"nt/zemdl3","slide":3,"text":"推荐架构：硬件驱动在各自车载计算机运行，虚拟机承担 ROS Master、显示、记录和协同融合。车间 UWB 连接表示距离观测，不表示已经获得绝对位置。"}
+{"kind":"slide","id":"sl/t507kf","slide":4,"title":"Page   4","textShapes":26}
+{"kind":"shape","id":"sh/s3e5kbi9","slide":4,"bbox":[1432,844,168,56]}
+{"kind":"textbox","id":"sh/t4n6tgzu","slide":4,"text":"Page   4","textPreview":"Page   4","textChars":8,"textLines":1,"bbox":[1450,853,135,30]}
+{"kind":"shape","id":"sh/e5wnml0f","slide":4,"bbox":[66,105,9,73]}
+{"kind":"textbox","id":"sh/f65ovqh0","slide":4,"text":"第一周：双车基础与网络","textPreview":"第一周：双车基础与网络","textChars":11,"textLines":1,"bbox":[90,93,720,54]}
+{"kind":"textbox","id":"sh/g7ypovyl","slide":4,"text":"Week 1: Dual-Robot Bring-up and Networking","textPreview":"Week 1: Dual-Robot Bring-up and Networking","textChars":42,"textLines":1,"bbox":[92,145,820,33]}
+{"kind":"shape","id":"sh/1876x0z6","slide":4,"bbox":[150,399,1270,2]}
+{"kind":"shape","id":"sh/u9cna10b","slide":4,"bbox":[128,270,54,54]}
+{"kind":"textbox","id":"sh/valojmhw","slide":4,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[128,274,54,42]}
+{"kind":"textbox","id":"sh/jyl0fqpw","slide":4,"text":"设备清点","textPreview":"设备清点","textChars":4,"textLines":1,"bbox":[196,269,222,32]}
+{"kind":"textbox","id":"sh/ixsjmlor","slide":4,"text":"Hardware inventory","textPreview":"Hardware inventory","textChars":18,"textLines":1,"bbox":[196,301,222,28]}
+{"kind":"shape","id":"sh/503ih0n2","slide":4,"bbox":[460,270,54,54]}
+{"kind":"textbox","id":"sh/4zu1ov6h","slide":4,"text":"2","textPreview":"2","textChars":1,"textLines":1,"bbox":[460,274,54,42]}
+{"kind":"textbox","id":"sh/va10b6p0","slide":4,"text":"分别复现单车","textPreview":"分别复现单车","textChars":6,"textLines":1,"bbox":[528,269,242,32]}
+{"kind":"textbox","id":"sh/u9sji1of","slide":4,"text":"Reproduce each robot","textPreview":"Reproduce each robot","textChars":20,"textLines":1,"bbox":[528,301,242,28]}
+{"kind":"shape","id":"sh/hwjidg76","slide":4,"bbox":[805,270,54,54]}
+{"kind":"textbox","id":"sh/wba1kb6l","slide":4,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[805,274,54,42]}
+{"kind":"textbox","id":"sh/761076p4","slide":4,"text":"桥接网络与固定 IP","textPreview":"桥接网络与固定 IP","textChars":10,"textLines":1,"bbox":[873,269,272,32]}
+{"kind":"textbox","id":"sh/m58ze1oj","slide":4,"text":"Bridged network and static IPs","textPreview":"Bridged network and static IPs","textChars":30,"textLines":1,"bbox":[873,301,272,28]}
+{"kind":"shape","id":"sh/q18jq18b","slide":4,"bbox":[1175,270,54,54]}
+{"kind":"textbox","id":"sh/b2hkz69w","slide":4,"text":"4","textPreview":"4","textChars":1,"textLines":1,"bbox":[1175,274,54,42]}
+{"kind":"textbox","id":"sh/c3q1sbqh","slide":4,"text":"公共 Master 与同步","textPreview":"公共 Master 与同步","textChars":13,"textLines":1,"bbox":[1243,269,272,32]}
+{"kind":"textbox","id":"sh/d4z21wrm","slide":4,"text":"Shared master and clock sync","textPreview":"Shared master and clock sync","textChars":28,"textLines":1,"bbox":[1243,301,272,28]}
+{"kind":"textbox","id":"sh/y58ju187","slide":4,"text":"检查项目","textPreview":"检查项目","textChars":4,"textLines":1,"bbox":[130,486,280,35]}
+{"kind":"shape","id":"sh/z6hk369s","slide":4,"bbox":[130,543,12,12]}
+{"kind":"textbox","id":"sh/k7a1wbqd","slide":4,"text":"底盘、IMU、/odom、/scan 连续发布","textPreview":"底盘、IMU、/odom、/scan 连续发布","textChars":23,"textLines":1,"bbox":[154,536,566,31]}
+{"kind":"textbox","id":"sh/l8j25gry","slide":4,"text":"Continuous chassis, IMU, odometry and LiDAR topics","textPreview":"Continuous chassis, IMU, odometry and LiDAR topics","textChars":50,"textLines":1,"bbox":[154,567,566,28]}
+{"kind":"shape","id":"sh/m9sjyl8j","slide":4,"bbox":[130,630,12,12]}
+{"kind":"textbox","id":"sh/7u1k7q94","slide":4,"text":"三台系统相互可达，时间偏差可记录","textPreview":"三台系统相互可达，时间偏差可记录","textChars":16,"textLines":1,"bbox":[154,623,566,31]}
+{"kind":"textbox","id":"sh/h0ned4fi","slide":4,"text":"All machines communicate and clock offset is measured","textPreview":"All machines communicate and clock offset is measured","textChars":53,"textLines":1,"bbox":[154,654,566,28]}
+{"kind":"shape","id":"sh/gfedkzex","slide":4,"bbox":[830,543,12,12]}
+{"kind":"textbox","id":"sh/ve5wbexc","slide":4,"text":"保存两份单车基线 rosbag","textPreview":"保存两份单车基线 rosbag","textChars":15,"textLines":1,"bbox":[854,536,546,31]}
+{"kind":"textbox","id":"sh/udwvi9wr","slide":4,"text":"Record one baseline rosbag for each robot","textPreview":"Record one baseline rosbag for each robot","textChars":41,"textLines":1,"bbox":[854,567,546,28]}
+{"kind":"shape","id":"sh/547ehofe","slide":4,"bbox":[830,630,12,12]}
+{"kind":"textbox","id":"sh/43ydojet","slide":4,"text":"记录 IP、串口、频率和 frame","textPreview":"记录 IP、串口、频率和 frame","textChars":18,"textLines":1,"bbox":[854,623,546,31]}
+{"kind":"textbox","id":"sh/325wfex8","slide":4,"text":"Document IPs, ports, rates and frame IDs","textPreview":"Document IPs, ports, rates and frame IDs","textChars":40,"textLines":1,"bbox":[854,654,546,28]}
+{"kind":"shape","id":"sh/i1wvm9w3","slide":4,"bbox":[78,748,1440,66]}
+{"kind":"textbox","id":"sh/d87elofq","slide":4,"text":"验收：两辆车均可单独稳定运行 10 分钟","textPreview":"验收：两辆车均可单独稳定运行 10 分钟","textChars":20,"textLines":1,"bbox":[102,756,770,30]}
+{"kind":"textbox","id":"sh/s7yds3e5","slide":4,"text":"Exit criterion: each robot runs alone for 10 minutes","textPreview":"Exit criterion: each robot runs alone for 10 minutes","textChars":52,"textLines":1,"bbox":[890,758,600,28]}
+{"kind":"image","id":"im/a54ri1wf","slide":4,"name":"","alt":"Hong Kong Polytechnic University AAE presentation background supplied by the user","bbox":[0,0,1600,900]}
+{"kind":"notes","id":"nt/t507kf","slide":4,"text":"第一周不安装 UWB。先排除底盘、雷达、串口和网络问题。虚拟机应使用桥接网络，避免 NAT 导致小车无法回连。"}
+{"kind":"slide","id":"sl/uwgimk","slide":5,"title":"Page   5","textShapes":20}
+{"kind":"shape","id":"sh/5s7a18by","slide":5,"bbox":[1432,844,168,56]}
+{"kind":"textbox","id":"sh/4ry983ud","slide":5,"text":"Page   5","textPreview":"Page   5","textChars":8,"textLines":1,"bbox":[1450,853,135,30]}
+{"kind":"shape","id":"sh/rups3it4","slide":5,"bbox":[66,105,9,73]}
+{"kind":"textbox","id":"sh/6tgradcj","slide":5,"text":"第二周：命名空间、TF 与独立定位","textPreview":"第二周：命名空间、TF 与独立定位","textChars":17,"textLines":1,"bbox":[90,93,720,54]}
+{"kind":"textbox","id":"sh/dw7a58ba","slide":5,"text":"Week 2: Namespaces, TF and Independent Localization","textPreview":"Week 2: Namespaces, TF and Independent Localization","textChars":51,"textLines":1,"bbox":[92,145,820,33]}
+{"kind":"textbox","id":"sh/svy9c3up","slide":5,"text":"话题隔离 / TOPIC ISOLATION","textPreview":"话题隔离 / TOPIC ISOLATION","textChars":22,"textLines":1,"bbox":[95,220,650,38]}
+{"kind":"shape","id":"sh/fy9s7it0","slide":5,"bbox":[95,272,650,342]}
+{"kind":"textbox","id":"sh/exgredcv","slide":5,"text":"/car1/cmd_vel\n/car1/odom\n/car1/imu\n/car1/scan","textPreview":"/car1/cmd_vel | /car1/odom | /car1/imu | /car1/scan","textChars":45,"textLines":4,"bbox":[135,307,245,250]}
+{"kind":"shape","id":"sh/0reh4r6h","slide":5,"bbox":[415,300,2,270]}
+{"kind":"textbox","id":"sh/lsnidw72","slide":5,"text":"/car2/cmd_vel\n/car2/odom\n/car2/imu\n/car2/scan","textPreview":"/car2/cmd_vel | /car2/odom | /car2/imu | /car2/scan","textChars":45,"textLines":4,"bbox":[460,307,245,250]}
+{"kind":"textbox","id":"sh/ypwz21ob","slide":5,"text":"双 TF 树 / TWO TF TREES","textPreview":"双 TF 树 / TWO TF TREES","textChars":21,"textLines":1,"bbox":[820,220,650,38]}
+{"kind":"shape","id":"sh/zq50bmpw","slide":5,"bbox":[820,272,650,342]}
+{"kind":"textbox","id":"sh/8fy18b6d","slide":5,"text":"map","textPreview":"map","textChars":3,"textLines":1,"bbox":[1085,296,120,35]}
+{"kind":"shape","id":"sh/9g7ihg7y","slide":5,"bbox":[1145,342,2,29]}
+{"kind":"shape","id":"sh/mtgz61o7","slide":5,"bbox":[1000,370,300,2]}
+{"kind":"shape","id":"sh/nup0f6ps","slide":5,"bbox":[1000,370,2,20]}
+{"kind":"shape","id":"sh/wjy1cb6p","slide":5,"bbox":[1300,370,2,20]}
+{"kind":"textbox","id":"sh/xkrilg7u","slide":5,"text":"car1/odom","textPreview":"car1/odom","textChars":9,"textLines":1,"bbox":[890,394,190,35]}
+{"kind":"textbox","id":"sh/50ni5gze","slide":5,"text":"car2/odom","textPreview":"car2/odom","textChars":9,"textLines":1,"bbox":[1210,394,190,35]}
+{"kind":"shape","id":"sh/4zehwbyt","slide":5,"bbox":[1000,441,2,45]}
+{"kind":"shape","id":"sh/jel036h8","slide":5,"bbox":[1300,441,2,45]}
+{"kind":"textbox","id":"sh/idczu1gn","slide":5,"text":"car1/base_link","textPreview":"car1/base_link","textChars":14,"textLines":1,"bbox":[875,493,240,35]}
+{"kind":"textbox","id":"sh/t4ni90za","slide":5,"text":"car2/base_link","textPreview":"car2/base_link","textChars":14,"textLines":1,"bbox":[1180,493,240,35]}
+{"kind":"textbox","id":"sh/s3eh0vyp","slide":5,"text":"两套 AMCL 在同一地图中独立定位","textPreview":"两套 AMCL 在同一地图中独立定位","textChars":18,"textLines":1,"bbox":[922,552,450,30]}
+{"kind":"textbox","id":"sh/r2507qh4","slide":5,"text":"Two AMCL instances localize independently","textPreview":"Two AMCL instances localize independently","textChars":41,"textLines":1,"bbox":[922,582,450,24]}
+{"kind":"shape","id":"sh/61wzylgj","slide":5,"bbox":[110,659,12,12]}
+{"kind":"textbox","id":"sh/983ixwz6","slide":5,"text":"分别发送速度指令，只允许目标车辆响应","textPreview":"分别发送速度指令，只允许目标车辆响应","textChars":18,"textLines":1,"bbox":[134,652,611,31]}
+{"kind":"textbox","id":"sh/87ahoryl","slide":5,"text":"Command isolation verified for both robots","textPreview":"Command isolation verified for both robots","textChars":42,"textLines":1,"bbox":[134,683,611,28]}
+{"kind":"shape","id":"sh/e1onits7","slide":5,"bbox":[840,659,12,12]}
+{"kind":"textbox","id":"sh/z2xobyts","slide":5,"text":"RViz 同时显示两车轨迹，TF 无冲突","textPreview":"RViz 同时显示两车轨迹，TF 无冲突","textChars":20,"textLines":1,"bbox":[864,652,566,31]}
+{"kind":"textbox","id":"sh/03q5k3ad","slide":5,"text":"Both trajectories visible in RViz without TF conflicts","textPreview":"Both trajectories visible in RViz without TF conflicts","textChars":54,"textLines":1,"bbox":[864,683,566,28]}
+{"kind":"shape","id":"sh/14z6d8bi","slide":5,"bbox":[78,748,1440,66]}
+{"kind":"textbox","id":"sh/m587mds3","slide":5,"text":"验收：双车同时运行，任一车辆重启不影响另一辆","textPreview":"验收：双车同时运行，任一车辆重启不影响另一辆","textChars":22,"textLines":1,"bbox":[102,756,770,30]}
+{"kind":"textbox","id":"sh/n6hofito","slide":5,"text":"Exit criterion: independent operation and restart","textPreview":"Exit criterion: independent operation and restart","textChars":49,"textLines":1,"bbox":[890,758,600,28]}
+{"kind":"image","id":"im/z2tk3u54","slide":5,"name":"","alt":"Hong Kong Polytechnic University AAE presentation background supplied by the user","bbox":[0,0,1600,900]}
+{"kind":"notes","id":"nt/uwgimk","slide":5,"text":"第二周得到的是双车独立定位基线，还不称为协同定位。共享 map，但每辆车保留独立 odom 和 base_link 链。"}
+{"kind":"slide","id":"sl/1vko8x","slide":6,"title":"Page   6","textShapes":17}
+{"kind":"shape","id":"sh/idgrqts7","slide":6,"bbox":[1432,844,168,56]}
+{"kind":"textbox","id":"sh/3ep8jy9s","slide":6,"text":"Page   6","textPreview":"Page   6","textChars":8,"textLines":1,"bbox":[1450,853,135,30]}
+{"kind":"shape","id":"sh/gby9o3ah","slide":6,"bbox":[66,105,9,73]}
+{"kind":"textbox","id":"sh/hc7qhor2","slide":6,"text":"第三周：UWB 接入与标定","textPreview":"第三周：UWB 接入与标定","textChars":13,"textLines":1,"bbox":[90,93,720,54]}
+{"kind":"textbox","id":"sh/u9g7mtsb","slide":6,"text":"Week 3: UWB Integration and Calibration","textPreview":"Week 3: UWB Integration and Calibration","textChars":39,"textLines":1,"bbox":[92,145,820,33]}
+{"kind":"shape","id":"sh/vap8fy9w","slide":6,"bbox":[88,222,450,445]}
+{"kind":"textbox","id":"sh/07290nql","slide":6,"text":"接口准备","textPreview":"接口准备","textChars":4,"textLines":1,"bbox":[120,244,250,38]}
+{"kind":"shape","id":"sh/18batsr6","slide":6,"bbox":[120,321,12,12]}
+{"kind":"textbox","id":"sh/x4fu1036","slide":6,"text":"唯一节点 ID 和固定串口","textPreview":"唯一节点 ID 和固定串口","textChars":13,"textLines":1,"bbox":[144,314,356,31]}
+{"kind":"textbox","id":"sh/w36tsvml","slide":6,"text":"Unique node IDs and stable device ports","textPreview":"Unique node IDs and stable device ports","textChars":39,"textLines":1,"bbox":[144,345,356,28]}
+{"kind":"shape","id":"sh/v2xczqlg","slide":6,"bbox":[120,412,12,12]}
+{"kind":"textbox","id":"sh/ahobql4v","slide":6,"text":"带时间戳的距离消息","textPreview":"带时间戳的距离消息","textChars":9,"textLines":1,"bbox":[144,405,356,31]}
+{"kind":"textbox","id":"sh/9gfuxg3a","slide":6,"text":"Timestamped range messages","textPreview":"Timestamped range messages","textChars":26,"textLines":1,"bbox":[144,436,356,28]}
+{"kind":"shape","id":"sh/8f6tobmp","slide":6,"bbox":[120,503,12,12]}
+{"kind":"textbox","id":"sh/nexcv6l4","slide":6,"text":"base_link 到 uwb_link 外参","textPreview":"base_link 到 uwb_link 外参","textChars":23,"textLines":1,"bbox":[144,496,356,31]}
+{"kind":"textbox","id":"sh/mdobm14j","slide":6,"text":"Extrinsic transform from base_link to uwb_link","textPreview":"Extrinsic transform from base_link to uwb_link","textChars":46,"textLines":1,"bbox":[144,527,356,28]}
+{"kind":"shape","id":"sh/tcju9k3e","slide":6,"bbox":[120,594,12,12]}
+{"kind":"textbox","id":"sh/sbqt0fmt","slide":6,"text":"频率、延迟和丢包统计","textPreview":"频率、延迟和丢包统计","textChars":10,"textLines":1,"bbox":[144,587,356,31]}
+{"kind":"textbox","id":"sh/sfydwja5","slide":6,"text":"Rate, latency and packet-loss statistics","textPreview":"Rate, latency and packet-loss statistics","textChars":40,"textLines":1,"bbox":[144,618,356,28]}
+{"kind":"textbox","id":"sh/dgre5obq","slide":6,"text":"标定矩阵","textPreview":"标定矩阵","textChars":4,"textLines":1,"bbox":[610,222,250,38]}
+{"kind":"shape","id":"sh/repw3etk","slide":6,"bbox":[610,640,850,72]}
+{"kind":"textbox","id":"sh/4bydsju9","slide":6,"text":"一条车间距离只能提供一个标量约束，不能单独确定两车的二维位置与航向","textPreview":"一条车间距离只能提供一个标量约束，不能单独确定两车的二维位置与航向","textChars":33,"textLines":1,"bbox":[638,650,790,30]}
+{"kind":"textbox","id":"sh/5c7e14be","slide":6,"text":"A single inter-robot range cannot determine both 2D poses and headings","textPreview":"A single inter-robot range cannot determine both 2D poses and headings","textChars":70,"textLines":1,"bbox":[638,681,790,23]}
+{"kind":"shape","id":"sh/i9gvq9c3","slide":6,"bbox":[78,748,1440,66]}
+{"kind":"textbox","id":"sh/3apwzeto","slide":6,"text":"验收：形成 UWB 误差统计和稳定 ROS 话题","textPreview":"验收：形成 UWB 误差统计和稳定 ROS 话题","textChars":24,"textLines":1,"bbox":[102,756,770,30]}
+{"kind":"textbox","id":"sh/gnedozux","slide":6,"text":"Exit criterion: calibrated ranging and stable ROS data","textPreview":"Exit criterion: calibrated ranging and stable ROS data","textChars":54,"textLines":1,"bbox":[890,758,600,28]}
+{"kind":"table","id":"tb/9sjato3u","slide":6,"name":"","rows":5,"cols":4,"preview":"条件 Condition | 静止 Static | 运动 Moving | 输出 Output","bbox":[610,286,850,330]}
+{"kind":"image","id":"im/of2xg7at","slide":6,"name":"","alt":"Hong Kong Polytechnic University AAE presentation background supplied by the user","bbox":[0,0,1600,900]}
+{"kind":"notes","id":"nt/1vko8x","slide":6,"text":"第三周先把 UWB 当作独立传感器，不直接并入定位。标定覆盖 LOS、人体遮挡、车体遮挡、静止和运动情况。黄色说明用于避免过度解释单条距离约束。"}
+{"kind":"slide","id":"sl/uj3t1w","slide":7,"title":"Page   7","textShapes":18}
+{"kind":"shape","id":"sh/x0v21onq","slide":7,"bbox":[1432,844,168,56]}
+{"kind":"textbox","id":"sh/wz218jm5","slide":7,"text":"Page   7","textPreview":"Page   7","textChars":8,"textLines":1,"bbox":[1450,853,135,30]}
+{"kind":"shape","id":"sh/nut0ve5o","slide":7,"bbox":[66,105,9,73]}
+{"kind":"textbox","id":"sh/29kj2943","slide":7,"text":"第四周：协同融合与在线演示","textPreview":"第四周：协同融合与在线演示","textChars":13,"textLines":1,"bbox":[90,93,720,54]}
+{"kind":"textbox","id":"sh/pwbix4nu","slide":7,"text":"Week 4: Cooperative Fusion and Online Demonstration","textPreview":"Week 4: Cooperative Fusion and Online Demonstration","textChars":51,"textLines":1,"bbox":[92,145,820,33]}
+{"kind":"shape","id":"sh/ov214jm9","slide":7,"bbox":[90,262,300,150]}
+{"kind":"shape","id":"sh/7qdk7y5s","slide":7,"bbox":[465,262,300,150]}
+{"kind":"shape","id":"sh/6p4jet4n","slide":7,"bbox":[840,262,300,150]}
+{"kind":"shape","id":"sh/k32hkz2t","slide":7,"bbox":[1215,262,300,150]}
+{"kind":"textbox","id":"sh/l4vytk3e","slide":7,"text":"同步 rosbag","textPreview":"同步 rosbag","textChars":9,"textLines":1,"bbox":[112,284,256,34]}
+{"kind":"textbox","id":"sh/y1kzipk3","slide":7,"text":"Synchronized datasets","textPreview":"Synchronized datasets","textChars":21,"textLines":1,"bbox":[112,326,256,27]}
+{"kind":"textbox","id":"sh/j2tgrul8","slide":7,"text":"离线融合","textPreview":"离线融合","textChars":4,"textLines":1,"bbox":[487,284,256,34]}
+{"kind":"textbox","id":"sh/cz2hgf2x","slide":7,"text":"Offline fusion","textPreview":"Offline fusion","textChars":14,"textLines":1,"bbox":[487,326,256,27]}
+{"kind":"textbox","id":"sh/x0bypk3i","slide":7,"text":"异常值处理","textPreview":"异常值处理","textChars":5,"textLines":1,"bbox":[862,284,256,34]}
+{"kind":"textbox","id":"sh/axkfe5kr","slide":7,"text":"Outlier handling","textPreview":"Outlier handling","textChars":16,"textLines":1,"bbox":[862,326,256,27]}
+{"kind":"textbox","id":"sh/bytgnalc","slide":7,"text":"在线节点与演示","textPreview":"在线节点与演示","textChars":7,"textLines":1,"bbox":[1237,284,256,34]}
+{"kind":"textbox","id":"sh/ovixcv2l","slide":7,"text":"Online node and demo","textPreview":"Online node and demo","textChars":20,"textLines":1,"bbox":[1237,326,256,27]}
+{"kind":"shape","id":"sh/pwryl036","slide":7,"bbox":[390,337,75,0]}
+{"kind":"shape","id":"sh/5gj6tcry","slide":7,"bbox":[765,337,75,0]}
+{"kind":"shape","id":"sh/4fa507qd","slide":7,"bbox":[1140,337,75,0]}
+{"kind":"shape","id":"sh/3eh4r29s","slide":7,"bbox":[170,487,1260,162]}
+{"kind":"textbox","id":"sh/id8nyx87","slide":7,"text":"观测模型 / Measurement model","textPreview":"观测模型 / Measurement model","textChars":24,"textLines":1,"bbox":[204,506,410,30]}
+{"kind":"textbox","id":"sh/hczmpsrm","slide":7,"text":"z₁₂ = ‖p₁ − p₂‖ + ε","textPreview":"z₁₂ = ‖p₁ − p₂‖ + ε","textChars":19,"textLines":1,"bbox":[210,551,435,54]}
+{"kind":"shape","id":"sh/gbq5wnqh","slide":7,"bbox":[690,510,2,110]}
+{"kind":"textbox","id":"sh/vqh4ni9w","slide":7,"text":"第一版方法","textPreview":"第一版方法","textChars":5,"textLines":1,"bbox":[744,508,240,30]}
+{"kind":"textbox","id":"sh/up8nudsb","slide":7,"text":"集中式 EKF 或小型因子图\n先离线复现，再转为实时节点","textPreview":"集中式 EKF 或小型因子图 | 先离线复现，再转为实时节点","textChars":28,"textLines":2,"bbox":[744,550,570,62]}
+{"kind":"textbox","id":"sh/18361wr6","slide":7,"text":"Centralized EKF or a compact factor graph\nValidate offline before real-time deployment","textPreview":"Centralized EKF or a compact factor graph | Validate offline before real-time deployment","textChars":86,"textLines":2,"bbox":[744,614,620,34]}
+{"kind":"shape","id":"sh/07u58rql","slide":7,"bbox":[78,748,1440,66]}
+{"kind":"textbox","id":"sh/yt432to3","slide":7,"text":"验收：RViz 实时显示两车轨迹、UWB 距离和融合状态","textPreview":"验收：RViz 实时显示两车轨迹、UWB 距离和融合状态","textChars":28,"textLines":1,"bbox":[102,756,770,30]}
+{"kind":"textbox","id":"sh/judkvepo","slide":7,"text":"Exit criterion: a repeatable live demonstration","textPreview":"Exit criterion: a repeatable live demonstration","textChars":47,"textLines":1,"bbox":[890,758,600,28]}
+{"kind":"image","id":"im/r6dkbqdw","slide":7,"name":"","alt":"Hong Kong Polytechnic University AAE presentation background supplied by the user","bbox":[0,0,1600,900]}
+{"kind":"notes","id":"nt/uj3t1w","slide":7,"text":"第四周先用 rosbag 离线实现。方法优先选择集中式 EKF 或小型因子图，避免本月同时引入分布式通信和复杂优化。观测模型表达的是车间距离。"}
+{"kind":"slide","id":"sl/wr577d","slide":8,"title":"Page   8","textShapes":5}
+{"kind":"shape","id":"sh/n6lcjqtk","slide":8,"bbox":[1432,844,168,56]}
+{"kind":"textbox","id":"sh/m5cbqlcz","slide":8,"text":"Page   8","textPreview":"Page   8","textChars":8,"textLines":1,"bbox":[1450,853,135,30]}
+{"kind":"shape","id":"sh/xcnup0bm","slide":8,"bbox":[66,105,9,73]}
+{"kind":"textbox","id":"sh/wbetwfuh","slide":8,"text":"实验场景与评价指标","textPreview":"实验场景与评价指标","textChars":9,"textLines":1,"bbox":[90,93,720,54]}
+{"kind":"textbox","id":"sh/va5cnatw","slide":8,"text":"Test Scenarios and Evaluation Metrics","textPreview":"Test Scenarios and Evaluation Metrics","textChars":37,"textLines":1,"bbox":[92,145,820,33]}
+{"kind":"textbox","id":"sh/507utkby","slide":8,"text":"性能改善属于待验证结果，月底汇报同时呈现有效情况和失败情况","textPreview":"性能改善属于待验证结果，月底汇报同时呈现有效情况和失败情况","textChars":29,"textLines":1,"bbox":[194,744,1210,30]}
+{"kind":"textbox","id":"sh/kzed0fud","slide":8,"text":"Any performance gain remains an experimental finding, including failure cases","textPreview":"Any performance gain remains an experimental finding, including failure cases","textChars":77,"textLines":1,"bbox":[194,775,1210,25]}
+{"kind":"table","id":"tb/na1ozy9k","slide":8,"name":"","rows":7,"cols":4,"preview":"场景 Scenario | 验证目的 Purpose | 对比方法 Comparison | 主要指标 Metrics","bbox":[72,218,1460,500]}
+{"kind":"image","id":"im/l4ni9szy","slide":8,"name":"","alt":"Hong Kong Polytechnic University AAE presentation background supplied by the user","bbox":[0,0,1600,900]}
+{"kind":"notes","id":"nt/wr577d","slide":8,"text":"本页定义月底实验矩阵。ATE 和 RPE 只有在获得可靠参考轨迹时才报告；没有真值时应清楚区分内部一致性与绝对精度。"}
+{"kind":"slide","id":"sl/rmceu3","slide":9,"title":"Page   9","textShapes":16}
+{"kind":"shape","id":"sh/yhor2tkj","slide":9,"bbox":[1432,844,168,56]}
+{"kind":"textbox","id":"sh/jixsvylo","slide":9,"text":"Page   9","textPreview":"Page   9","textChars":8,"textLines":1,"bbox":[1450,853,135,30]}
+{"kind":"shape","id":"sh/8769832l","slide":9,"bbox":[66,105,9,73]}
+{"kind":"textbox","id":"sh/t8za1836","slide":9,"text":"月底预期成果","textPreview":"月底预期成果","textChars":6,"textLines":1,"bbox":[90,93,720,54]}
+{"kind":"textbox","id":"sh/6lor6tkf","slide":9,"text":"Expected Outcomes by the End of the Month","textPreview":"Expected Outcomes by the End of the Month","textChars":41,"textLines":1,"bbox":[92,145,820,33]}
+{"kind":"shape","id":"sh/76xszyl0","slide":9,"bbox":[655,250,290,290]}
+{"kind":"textbox","id":"sh/obm9wj21","slide":9,"text":"初步达成","textPreview":"初步达成","textChars":4,"textLines":1,"bbox":[690,309,220,46]}
+{"kind":"textbox","id":"sh/9cvapo3m","slide":9,"text":"INITIAL\nMILESTONE","textPreview":"INITIAL | MILESTONE","textChars":17,"textLines":2,"bbox":[690,369,220,66]}
+{"kind":"textbox","id":"sh/t8zipsj6","slide":9,"text":"可重复的双车\n协同定位演示","textPreview":"可重复的双车 | 协同定位演示","textChars":13,"textLines":2,"bbox":[690,454,220,58]}
+{"kind":"shape","id":"sh/87q1wn2l","slide":9,"bbox":[96,236,430,190]}
+{"kind":"textbox","id":"sh/76h03i10","slide":9,"text":"代码与配置","textPreview":"代码与配置","textChars":5,"textLines":1,"bbox":[124,257,370,36]}
+{"kind":"textbox","id":"sh/6lojudkf","slide":9,"text":"双车 launch、命名空间、TF、EKF/UWB 参数\nDual-robot launch files, TF and fusion configs","textPreview":"双车 launch、命名空间、TF、EKF/UWB 参数 | Dual-robot launch files, TF and fusion configs","textChars":75,"textLines":2,"bbox":[124,311,370,82]}
+{"kind":"shape","id":"sh/hcz2tsj2","slide":9,"bbox":[1074,236,430,190]}
+{"kind":"textbox","id":"sh/gbq107ih","slide":9,"text":"数据与评估","textPreview":"数据与评估","textChars":5,"textLines":1,"bbox":[1102,257,370,36]}
+{"kind":"textbox","id":"sh/vahkr21w","slide":9,"text":"同步 rosbag、UWB 标定统计、轨迹对比\nSynchronized bags, calibration and trajectory comparison","textPreview":"同步 rosbag、UWB 标定统计、轨迹对比 | Synchronized bags, calibration and trajectory comparison","textChars":80,"textLines":2,"bbox":[1102,311,370,82]}
+{"kind":"shape","id":"sh/u98jyxkr","slide":9,"bbox":[96,500,430,190]}
+{"kind":"textbox","id":"sh/5gj2xcje","slide":9,"text":"演示与记录","textPreview":"演示与记录","textChars":5,"textLines":1,"bbox":[124,521,370,36]}
+{"kind":"textbox","id":"sh/4fa147it","slide":9,"text":"RViz 实时展示、运行说明、问题清单\nRViz demo, reproduction notes and issue log","textPreview":"RViz 实时展示、运行说明、问题清单 | RViz demo, reproduction notes and issue log","textChars":63,"textLines":2,"bbox":[124,575,370,82]}
+{"kind":"shape","id":"sh/ojil0bqp","slide":9,"bbox":[1074,500,430,190]}
+{"kind":"textbox","id":"sh/pkrm9gra","slide":9,"text":"明确边界","textPreview":"明确边界","textChars":4,"textLines":1,"bbox":[1102,521,370,36]}
+{"kind":"textbox","id":"sh/2h03yl8z","slide":9,"text":"记录不可观条件、UWB 失效和未解决问题\nDocument unobservable cases, failures and open issues","textPreview":"记录不可观条件、UWB 失效和未解决问题 | Document unobservable cases, failures and open issues","textChars":74,"textLines":2,"bbox":[1102,575,370,82]}
+{"kind":"shape","id":"sh/ni947694","slide":9,"bbox":[78,748,1440,66]}
+{"kind":"textbox","id":"sh/cnil4vq1","slide":9,"text":"本月成果定位：可运行、可测量、可复现","textPreview":"本月成果定位：可运行、可测量、可复现","textChars":18,"textLines":1,"bbox":[102,756,770,30]}
+{"kind":"textbox","id":"sh/xobmd0rm","slide":9,"text":"Monthly outcome: runnable, measurable and reproducible","textPreview":"Monthly outcome: runnable, measurable and reproducible","textChars":54,"textLines":1,"bbox":[890,758,600,28]}
+{"kind":"image","id":"im/ojutwni5","slide":9,"name":"","alt":"Hong Kong Polytechnic University AAE presentation background supplied by the user","bbox":[0,0,1600,900]}
+{"kind":"notes","id":"nt/rmceu3","slide":9,"text":"月底成果强调可运行、可测量和可复现，不预先承诺达到某个厘米级精度。四类交付物分别覆盖代码、数据、演示和边界。"}
+{"kind":"slide","id":"sl/osd29n","slide":10,"title":"Page   10","textShapes":26}
+{"kind":"shape","id":"sh/07utcjed","slide":10,"bbox":[1432,844,168,56]}
+{"kind":"textbox","id":"sh/18na5ofy","slide":10,"text":"Page   10","textPreview":"Page   10","textChars":9,"textLines":1,"bbox":[1450,853,135,30]}
+{"kind":"shape","id":"sh/m9wbetwj","slide":10,"bbox":[66,105,9,73]}
+{"kind":"textbox","id":"sh/na5s7ex4","slide":10,"text":"后续研究路线","textPreview":"后续研究路线","textChars":6,"textLines":1,"bbox":[90,93,720,54]}
+{"kind":"textbox","id":"sh/obetgjep","slide":10,"text":"Follow-on Research Roadmap","textPreview":"Follow-on Research Roadmap","textChars":26,"textLines":1,"bbox":[92,145,820,33]}
+{"kind":"textbox","id":"sh/9cna9ofu","slide":10,"text":"阶段 A","textPreview":"阶段 A","textChars":4,"textLines":1,"bbox":[106,218,180,34]}
+{"kind":"textbox","id":"sh/adwbitwf","slide":10,"text":"地面平台完善","textPreview":"地面平台完善","textChars":6,"textLines":1,"bbox":[106,258,320,42]}
+{"kind":"textbox","id":"sh/be5cbyx0","slide":10,"text":"Ground-platform refinement","textPreview":"Ground-platform refinement","textChars":26,"textLines":1,"bbox":[106,305,360,29]}
+{"kind":"shape","id":"sh/3yp0f6x4","slide":10,"bbox":[106,358,390,218]}
+{"kind":"shape","id":"sh/2xgzm1wj","slide":10,"bbox":[136,397,12,12]}
+{"kind":"textbox","id":"sh/p07ihgfu","slide":10,"text":"扩展视觉或激光定位","textPreview":"扩展视觉或激光定位","textChars":9,"textLines":1,"bbox":[160,390,306,31]}
+{"kind":"textbox","id":"sh/4zyhobe9","slide":10,"text":"Add visual or LiDAR localization","textPreview":"Add visual or LiDAR localization","textChars":32,"textLines":1,"bbox":[160,421,306,28]}
+{"kind":"shape","id":"sh/fu5gbmxs","slide":10,"bbox":[136,482,12,12]}
+{"kind":"textbox","id":"sh/utwzi1w7","slide":10,"text":"研究遮挡与通信中断","textPreview":"研究遮挡与通信中断","textChars":9,"textLines":1,"bbox":[160,475,306,31]}
+{"kind":"textbox","id":"sh/hw7ydwfy","slide":10,"text":"Study occlusion and communication loss","textPreview":"Study occlusion and communication loss","textChars":38,"textLines":1,"bbox":[160,506,306,28]}
+{"kind":"textbox","id":"sh/gvyhkred","slide":10,"text":"阶段 B","textPreview":"阶段 B","textChars":4,"textLines":1,"bbox":[606,218,180,34]}
+{"kind":"textbox","id":"sh/zq90nqxw","slide":10,"text":"Unreal 月面迁移","textPreview":"Unreal 月面迁移","textChars":11,"textLines":1,"bbox":[606,258,340,42]}
+{"kind":"textbox","id":"sh/ep0zulwr","slide":10,"text":"Migration to a lunar Unreal scene","textPreview":"Migration to a lunar Unreal scene","textChars":33,"textLines":1,"bbox":[606,305,400,29]}
+{"kind":"shape","id":"sh/ax4b2tkv","slide":10,"bbox":[606,358,390,218]}
+{"kind":"shape","id":"sh/vydcbelg","slide":10,"bbox":[636,397,12,12]}
+{"kind":"textbox","id":"sh/wz6t4j21","slide":10,"text":"复现传感器接口和时间戳","textPreview":"复现传感器接口和时间戳","textChars":11,"textLines":1,"bbox":[660,390,306,31]}
+{"kind":"textbox","id":"sh/x0fudo3m","slide":10,"text":"Replicate sensor interfaces and timing","textPreview":"Replicate sensor interfaces and timing","textChars":38,"textLines":1,"bbox":[660,421,306,28]}
+{"kind":"shape","id":"sh/i1ob6tk7","slide":10,"bbox":[636,482,12,12]}
+{"kind":"textbox","id":"sh/j2xcfyls","slide":10,"text":"加入光照、地形和打滑退化","textPreview":"加入光照、地形和打滑退化","textChars":12,"textLines":1,"bbox":[660,475,306,31]}
+{"kind":"textbox","id":"sh/k36t832d","slide":10,"text":"Add lighting, terrain and slip degradation","textPreview":"Add lighting, terrain and slip degradation","textChars":42,"textLines":1,"bbox":[660,506,306,28]}
+{"kind":"textbox","id":"sh/54fu183i","slide":10,"text":"阶段 C","textPreview":"阶段 C","textChars":4,"textLines":1,"bbox":[1106,218,180,34]}
+{"kind":"textbox","id":"sh/y5kbu9kn","slide":10,"text":"月球 PNT 研究","textPreview":"月球 PNT 研究","textChars":9,"textLines":1,"bbox":[1106,258,340,42]}
+{"kind":"textbox","id":"sh/z6ts3ul8","slide":10,"text":"Lunar PNT research","textPreview":"Lunar PNT research","textChars":18,"textLines":1,"bbox":[1106,305,360,29]}
+{"kind":"shape","id":"sh/1kje9cnq","slide":10,"bbox":[1106,358,390,218]}
+{"kind":"shape","id":"sh/gjad07ml","slide":10,"bbox":[1136,397,12,12]}
+{"kind":"textbox","id":"sh/fy1w7250","slide":10,"text":"接入稀疏月球卫星测距","textPreview":"接入稀疏月球卫星测距","textChars":10,"textLines":1,"bbox":[1160,390,306,31]}
+{"kind":"textbox","id":"sh/ux8vyx4f","slide":10,"text":"Introduce sparse lunar satellite ranging","textPreview":"Introduce sparse lunar satellite ranging","textChars":40,"textLines":1,"bbox":[1160,421,306,28]}
+{"kind":"shape","id":"sh/pojedcn2","slide":10,"bbox":[1136,482,12,12]}
+{"kind":"textbox","id":"sh/onax47mh","slide":10,"text":"比较 DEM、视觉和 PNT 互补性","textPreview":"比较 DEM、视觉和 PNT 互补性","textChars":18,"textLines":1,"bbox":[1160,475,306,31]}
+{"kind":"textbox","id":"sh/3m1wb25w","slide":10,"text":"Compare DEM, vision and PNT constraints","textPreview":"Compare DEM, vision and PNT constraints","textChars":39,"textLines":1,"bbox":[1160,506,306,28]}
+{"kind":"shape","id":"sh/2lsf2h4b","slide":10,"bbox":[498,470,105,2]}
+{"kind":"shape","id":"sh/5sze1sni","slide":10,"bbox":[998,470,105,2]}
+{"kind":"shape","id":"sh/krqdsnmd","slide":10,"bbox":[248,635,1104,92]}
+{"kind":"textbox","id":"sh/8neh0v6l","slide":10,"text":"后续选题依据：本月实验揭示的误差模式、不可观条件和传感器互补关系","textPreview":"后续选题依据：本月实验揭示的误差模式、不可观条件和传感器互补关系","textChars":32,"textLines":1,"bbox":[278,648,1044,34]}
+{"kind":"textbox","id":"sh/9oni9076","slide":10,"text":"Topic selection will follow measured failure modes, observability and sensor complementarity","textPreview":"Topic selection will follow measured failure modes, observability and sensor complementarity","textChars":92,"textLines":1,"bbox":[278,685,1044,26]}
+{"kind":"image","id":"im/yp4buxs3","slide":10,"name":"","alt":"Hong Kong Polytechnic University AAE presentation background supplied by the user","bbox":[0,0,1600,900]}
+{"kind":"notes","id":"nt/osd29n","slide":10,"text":"后续先完善地面平台，再迁移到 Unreal 月面环境，最后接入稀疏月球卫星测距并讨论 DEM、视觉和 PNT 的互补性。最终论文题目由实际失败模式和实验结果决定。"}
