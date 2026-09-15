@@ -45,6 +45,8 @@
 
 经过筛选的论文、开源仓库、公开数据集及其优先级见 [ROS Car 双车协同定位资料目录](docs/roscar_reference_catalog.md)。目录区分本月可直接使用、需要按硬件选择、需要移植和后期架构参考，避免把“找到仓库”误写成“已经复现”。
 
+向 GitHub 上传时请使用 [GitHub 安全合并流程](docs/github_safe_merge.md)：先从最新默认分支建立独立分支，再挑选本地提交并通过 Pull Request 合入，禁止直接强制覆盖共享分支。
+
 ## 4. 仓库当前包含什么
 
 ```text
@@ -55,8 +57,15 @@ docs/
                             双车 ROS 网络、UWB 和协同定位实施清单
   roscar_reference_catalog.md
                             论文、开源仓库、数据集与月球/仿真迁移资料
+  github_safe_merge.md      云端认证、同步、冲突处理与 Pull Request 流程
 references.bib              当前核心文献的 BibTeX 入口
+ppt_month_plan/
+  output/                   深圳研究院双车协同定位月度计划（中英双语 PPT）
+  assets/                   演示文稿背景素材
+  render_v2/                最新版本逐页预览图
 ```
+
+演示文稿当前推荐使用 `ppt_month_plan/output/深圳研究院双车协同定位月度计划_双语_v2.pptx`；`v1` 与对应渲染文件保留用于版本比较。
 
 当前仅提供研究说明。尚未建立可运行的定位系统、依赖清单、数据下载脚本或实验命令。请勿将旧项目报告中已经完成的工作，理解为本仓库已经包含并验证了对应代码。
 
